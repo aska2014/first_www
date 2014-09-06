@@ -28,7 +28,7 @@ class CreateUsersTable extends Migration {
             $table->string('profile_image')->nullable();
 
             $table->string('remember_token');
-            $table->boolean('email_validated');
+            $table->boolean('email_validated')->default(false);
 
 			$table->timestamps();
             $table->softDeletes();
