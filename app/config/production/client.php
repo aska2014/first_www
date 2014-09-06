@@ -1,5 +1,5 @@
 <?php
 
 return array(
-    'url' => 'http://localhost:8000'
+    'url' => 'http://app.firstchoice.cc/'
 );

@@ -41,10 +41,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fast_commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="0" selection-end="64" vertical-scroll-proportion="0.05752961" vertical-offset="0" max-vertical-offset="591">
+            <state line="2" column="22" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/production/client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="40" selection-start="61" selection-end="61" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="client.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/local/client.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
@@ -88,7 +115,6 @@
         <option value="$PROJECT_DIR$/app/config/local/mail.php" />
         <option value="$PROJECT_DIR$/app/config/client.php" />
         <option value="$PROJECT_DIR$/app/config/local/client.php" />
-        <option value="$PROJECT_DIR$/app/config/production/client.php" />
         <option value="$PROJECT_DIR$/app/models/Drive/File.php" />
         <option value="$PROJECT_DIR$/app/controllers/FileController.php" />
         <option value="$PROJECT_DIR$/app/controllers/NotificationController.php" />
@@ -120,6 +146,7 @@
         <option value="$PROJECT_DIR$/app/config/production/mail.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185608_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/APIController.php" />
+        <option value="$PROJECT_DIR$/app/config/production/client.php" />
       </list>
     </option>
   </component>
@@ -261,6 +288,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -393,21 +442,6 @@
     <entry file="file://$PROJECT_DIR$/app/config/local/mail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="4" column="22" selection-start="44" selection-end="44" vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/client.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php">
@@ -659,7 +693,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/fast_commit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="0" selection-end="64" vertical-scroll-proportion="0.05752961" vertical-offset="0" max-vertical-offset="591">
+        <state line="2" column="22" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/local/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/production/client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="40" selection-start="61" selection-end="61" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544">
           <folding />
         </state>
       </provider>
