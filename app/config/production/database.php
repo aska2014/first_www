@@ -23,7 +23,7 @@ return array(
         'mysql' => array(
             'driver'    => 'mysql',
             'host'      => 'localhost',
-            'database'  => 'firstchoice_company_api',
+            'database'  => 'company',
             'username'  => 'kareem3d',
             'password'  => 'IJR*&#$4SAD',
             'charset'   => 'utf8',
