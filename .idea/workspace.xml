@@ -53,7 +53,7 @@
       <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="36" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-14.461538" vertical-offset="1018" max-vertical-offset="3859">
+            <state line="112" column="25" selection-start="2540" selection-end="2541" vertical-scroll-proportion="-12.5" vertical-offset="1579" max-vertical-offset="3859">
               <folding />
             </state>
           </provider>
@@ -100,7 +100,6 @@
         <option value="$PROJECT_DIR$/app/start/global.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185707_create_projects_table.php" />
         <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/APIController.php" />
         <option value="$PROJECT_DIR$/app/helpers/MimeType.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProjectStageController.php" />
         <option value="$PROJECT_DIR$/app/controllers/ProjectController.php" />
@@ -120,6 +119,7 @@
         <option value="$PROJECT_DIR$/fast_commit.txt" />
         <option value="$PROJECT_DIR$/app/config/production/mail.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185608_create_users_table.php" />
+        <option value="$PROJECT_DIR$/app/controllers/APIController.php" />
       </list>
     </option>
   </component>
@@ -480,11 +480,6 @@
         <state line="4" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/APIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="366" selection-end="377" vertical-scroll-proportion="0.5415929" vertical-offset="0" max-vertical-offset="578" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/models/Drive/File.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="31" selection-start="222" selection-end="222" vertical-scroll-proportion="0.20353982" vertical-offset="4" max-vertical-offset="2346" />
@@ -648,9 +643,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/APIController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="44" selection-start="390" selection-end="390" vertical-scroll-proportion="0.5415929" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="36" selection-start="1629" selection-end="1629" vertical-scroll-proportion="-14.461538" vertical-offset="1018" max-vertical-offset="3859">
+        <state line="112" column="25" selection-start="2540" selection-end="2541" vertical-scroll-proportion="-12.5" vertical-offset="1579" max-vertical-offset="3859">
           <folding />
         </state>
       </provider>

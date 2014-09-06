@@ -16,7 +16,7 @@ class APIController extends \Illuminate\Routing\Controller {
      */
     protected function isLocalEnvironment()
     {
-        return App::environment();
+        return App::environment() == 'local';
     }
 
     /**
