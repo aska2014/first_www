@@ -28,6 +28,8 @@ $env = $app->detectEnvironment(array(
 
 	'local' => array('Kareem-PC'),
 
+    'production' => array('*.firstchoice.cc')
+
 ));
 
 /*
