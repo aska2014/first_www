@@ -41,7 +41,10 @@ Route::group(['prefix' => 'api/v1'], function() {
     });
 
     Route::get('test', function() {
-        dd('karem mohamed again');
+
+        // Set me administrator
+        $user = \Cane\Models\Membership\User::find(1);
+        $user->departments()->attach(1);
     });
 });
 

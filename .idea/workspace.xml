@@ -26,7 +26,7 @@
       <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="31" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.7584369" vertical-offset="304" max-vertical-offset="1054">
+            <state line="49" column="0" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.6536412" vertical-offset="465" max-vertical-offset="1105">
               <folding />
             </state>
           </provider>
@@ -145,20 +145,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -553,7 +539,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="31" selection-start="1669" selection-end="1669" vertical-scroll-proportion="0.7584369" vertical-offset="304" max-vertical-offset="1054">
+        <state line="49" column="0" selection-start="1779" selection-end="1779" vertical-scroll-proportion="0.6536412" vertical-offset="465" max-vertical-offset="1105">
           <folding />
         </state>
       </provider>
