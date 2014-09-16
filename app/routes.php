@@ -40,8 +40,8 @@ Route::group(['prefix' => 'api/v1'], function() {
         Route::resource('drive.file', 'FileController');
     });
 
-    Route::post('test', function() {
-
+    Route::get('test', function() {
+        dd('karem mohamed');
     });
 });
 
