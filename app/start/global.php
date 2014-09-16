@@ -15,9 +15,6 @@ ClassLoader::addDirectories(array(
 
 	app_path().'/commands',
 	app_path().'/controllers',
-    app_path().'/models',
-    app_path().'/validators',
-    app_path().'/helpers',
 	app_path().'/database/seeds',
 
 ));
@@ -80,8 +77,12 @@ App::down(function()
 |
 */
 
+require app_path().'/filters.php';
+
 require app_path().'/start/errors.php';
 
-require app_path().'/start/bindings.php';
 
-require app_path().'/filters.php';
+// Don't register observers if running from CLI
+if(!App::runningInConsole()) {
+    require app_path().'/observers.php';
+}

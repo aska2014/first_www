@@ -1,36 +1,23 @@
 <?php
+use Cane\Models\Company\Department;
+use Cane\Models\Permission\DepartmentPermission;
+
 class DepartmentSeeder extends \Illuminate\Database\Seeder {
 
     public function run()
     {
-        DB::table('departments')->delete();
-        DB::table('department_permissions')->delete();
+        Department::truncate();
+        DepartmentPermission::truncate();
 
-        $administrative = \Company\Department::create(array(
+        $administrative = Department::create(array(
             'name' => 'administrative'
         ));
-        \Company\Department::create(array(
-            'name' => 'salesmen'
-        ));
-        \Company\Department::create(array(
-            'name' => 'projects'
-        ));
-        \Company\Department::create(array(
-            'name' => 'project'
-        ));
 
-        // Administrative permissions
-        $administrative->permissions()->create(array('name' => 'users.*'));
-        $administrative->permissions()->create(array('name' => 'permissions.*'));
-        $administrative->permissions()->create(array('name' => 'projects.*'));
-        $administrative->permissions()->create(array('name' => 'comments.*'));
-        $administrative->permissions()->create(array('name' => 'stages.*'));
-        $administrative->permissions()->create(array('name' => 'drives.*'));
-        $administrative->permissions()->create(array('name' => 'files.*'));
+        // Add all permissions to administrators
+        foreach(Config::get('permissions') as $permission) {
 
-
-        // Salesmen permissions
-
+            $administrative->permissions()->create(array('name' => $permission['name']));
+        }
     }
 
 } 

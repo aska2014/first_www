@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration {
             $table->string('password');
             $table->string('ip');
             $table->boolean('active')->default(false);
-            $table->timestamp('online_at');
+            $table->dateTime('online_at');
 
             $table->string('profile_image')->nullable();
 

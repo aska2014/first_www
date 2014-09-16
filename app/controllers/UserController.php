@@ -1,139 +1,106 @@
 <?php
 
-use Membership\User;
+use Cane\Models\Membership\User;
+use Cane\Permissions\UserPermission;
+use Cane\Validators\UserValidator;
 
-class UserController extends APIController
-{
+class UserController extends BaseController {
 
     /**
      * @param User $users
      * @param UserValidator $userValidator
+     * @param Cane\Permissions\UserPermission $userPermission
+     * @param Cane\UserSession $userSession
      */
-    public function __construct(User $users, UserValidator $userValidator)
+    public function __construct(User $users, UserValidator $userValidator, UserPermission $userPermission, \Cane\UserSession $userSession)
     {
         $this->users = $users;
         $this->userValidator = $userValidator;
+        $this->userPermission = $userPermission;
+        $this->userSession = $userSession;
     }
 
     /**
      * Get all users
      */
-    public function getAll()
+    public function index()
     {
-        return $this->users->all();
+        $query = $this->users;
+
+        // If with inactive is given and auth user can see inactive then don't call active query
+        if (! (Input::has('with_inactive') && $this->userPermission->canSeeInactive())) {
+
+            $query = $query->active();
+        }
+
+        if(Input::has('department_id')) {
+
+            $query = $query->byDepartmentId(Input::get('department_id'));
+        }
+
+        return $query->get();
     }
 
     /**
-     * @return User
+     * Show user by id
      */
-    public function getMe()
+    public function show(User $user)
     {
-        return $this->me();
+        // If user not active and auth user can't see inactive
+        if(! $user->active && ! $this->userPermission->canSeeInactive()) {
+
+            $this->noAccess("You can't see inactive users");
+        }
+
+        return $user;
     }
 
     /**
-     * Check user in (update IP and online date)
+     * Return current user in session.
      */
-    public function checkUserIn()
+    public function session()
     {
-        $this->me()->checkIn();
+        return $this->userSession->user()->withPermissions();
     }
 
     /**
      * @return mixed
      */
-    public function getNew()
-    {
-        return $this->users->newerThan($this->me()->online_at)->get();
-    }
-
-    /**
-     * Register new user
-     */
     public function register()
     {
-        $inputs = Input::all();
+        $this->userValidator->validateOrFail($data = Input::all());
 
-        $validator = $this->userValidator->make($inputs);
+        $user = $this->users->create($data);
 
-        if($validator->fails()) {
-
-            return Response::make($validator->messages(), 400);
-        }
-
-        // Accept all users for now
-        $user = $this->users->create($inputs);
-        $user->accept();
         return $user;
     }
 
     /**
-     * Login user
+     * Update user information
+     *
+     * @param Cane\Models\Membership\User $user
+     * @return static
      */
-    public function login()
+    public function update(User $user)
     {
-        $login = ['email' => Input::get('email'), 'password' => Input::get('password'), 'active' => 1];
+        // Only the following attributes are allowed to be updated
+        if(Input::has('full_name') && $this->userPermission->canUpdateBasicInfo($user)) {
 
-        if (! Auth::validate($login)) {
+            $user->full_name = Input::get('full_name');
+        }
+        if(Input::has('profile_image') && $this->userPermission->canUpdateBasicInfo($user)) {
 
-            App::abort(401, 'Given credentials are incorrect.');
+            $user->profile_image = Input::get('profile_image');
         }
 
-        // Check now with the email validated
-        $login['email_validated'] = 1;
+        if(Input::has('departments') && $this->userPermission->canUpdateDepartments($user)) {
 
-        if (! Auth::attempt($login, Input::get('remember_me', false))) {
-
-            return Response::make(['message' => 'You must validate your email first to login.'], 400);
+            $user->departments = Input::get('departments');
         }
 
-        return Auth::user();
-    }
+        $user->save();
 
-    /**
-     * Send email validation
-     */
-    public function sendEmailValidation()
-    {
-        $user = $this->users->byEmail(Input::get('email'))->first();
-
-        if(! $user) {
-            return Response::make(400, ['message' => 'Invalid request.']);
-        }
-
-        $token = $user->getValidateEmailToken();
-
-        $validationLink = URL::to('/api/users/validate-email/'.$user->id.'?token='.$token);
-
-        Mail::send('emails.auth.validate', compact('validationLink'), function($message) {
-            $message->to(Input::get('email'))->subject('Validate your FirstChoice account');
-        });
-
-        // Validate email for local environment
-        if($this->isLocalEnvironment()) {
-
-            $user->validateEmail($token);
-        }
-    }
-
-    /**
-     * Validate user email
-     */
-    public function validateEmail(User $user)
-    {
-        if(! $user->validateEmail(Input::get('token'))) {
-            return Response::make(400, ['message' => 'Invalid request.']);
-        }
-
-        return Redirect::to(Config::get('client.url'));
-    }
-
-    /**
-     * Logout user
-     */
-    public function logout()
-    {
-        Auth::logout();
+        return $user;
     }
 
     /**
@@ -141,6 +108,11 @@ class UserController extends APIController
      */
     public function accept(User $user)
     {
+        if(! $this->userPermission->canAccept($user)) {
+
+            $this->noAccess("You can't accept users");
+        }
+
         $user->accept();
 
         return ['message' => 'User accepted successfully'];
@@ -151,63 +123,14 @@ class UserController extends APIController
      */
     public function refuse(User $user)
     {
+        if(! $this->userPermission->canRefuse($user)) {
+
+            $this->noAccess("You can't refuse users");
+        }
+
         $user->refuse();
 
         return ['message' => 'User refused successfully'];
-    }
-
-    /**
-     * Update personal information
-     */
-    public function updatePersonalInfo()
-    {
-    }
-
-    /**
-     * Update work information
-     */
-    public function updateWorkInfo()
-    {
-    }
-
-    /**
-     * Update contact information
-     */
-    public function updateContactInfo()
-    {
-    }
-
-    /**
-     * Update user profile image
-     */
-    public function updateProfileImage()
-    {
-        // Get base path
-        $oldPath = str_replace(URL::to('public'), '', Input::get('image'));
-        $newPath = 'albums/profile/user'.$this->me()->id.'.jpg';
-
-        // open file a image resource
-        $img = Image::make(public_path($oldPath));
-
-        // crop the best fitting 5:3 (600x360) ratio and resize to 600x360 pixel
-        $img->fit(400, 400);
-
-        $fullDir = dirname(public_path($newPath));
-        if(! file_exists($fullDir)) {
-            mkdir($fullDir, 0777, true);
-        }
-
-        $img->save(public_path($newPath));
-
-        $this->me()->setProfileImage(URL::to('public/'.$newPath));
-    }
-
-    /**
-     * Set departments for this user
-     */
-    public function setDepartments()
-    {
-        $this->me()->departments()->sync(Input::get('departments', []));
     }
 
     /**
@@ -215,6 +138,11 @@ class UserController extends APIController
      */
     public function destroy(User $user)
     {
+        if(! $this->userPermission->canDelete($user)) {
+
+            $this->noAccess("You can't delete users");
+        }
+
         $user->delete();
 
         return ['message' => 'User deleted successfully'];

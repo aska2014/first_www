@@ -23,65 +23,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="database.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/production/database.php">
+      <file leaf-file-name="User.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Cane/Models/Membership/User.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="32" selection-start="843" selection-end="843" vertical-scroll-proportion="-11.615385" vertical-offset="123" max-vertical-offset="714">
+            <state line="9" column="15" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="5355">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mail.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/production/mail.php">
+      <file leaf-file-name="File.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Cane/Models/Drive/File.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="16" selection-start="1468" selection-end="1468" vertical-scroll-proportion="-16.346153" vertical-offset="306" max-vertical-offset="2210">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fast_commit.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="22" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/config/production/client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="40" selection-start="61" selection-end="61" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="client.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config/local/client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="112" column="25" selection-start="2540" selection-end="2541" vertical-scroll-proportion="-12.5" vertical-offset="1579" max-vertical-offset="3859">
-              <folding />
+            <state line="31" column="34" selection-start="775" selection-end="775" vertical-scroll-proportion="0.36412078" vertical-offset="322" max-vertical-offset="1734">
+              <folding>
+                <element signature="e#36#44#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -96,57 +53,57 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_09_03_190929_create_notifications_table.php" />
-        <option value="$PROJECT_DIR$/app/models/Social/Notification.php" />
-        <option value="$PROJECT_DIR$/app/start/errors.php" />
+        <option value="$PROJECT_DIR$/script_tags.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Company/ProjectUserAccessScope.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Settings.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Validators/UserValidator.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Validators/FileValidator.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/FileObserver.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Helpers/EasyImage.php" />
         <option value="$PROJECT_DIR$/app/controllers/PermissionController.php" />
-        <option value="$PROJECT_DIR$/app/config/auth.php" />
-        <option value="$PROJECT_DIR$/app/helpers/ApiRouter.php" />
-        <option value="$PROJECT_DIR$/app/filters.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/DepartmentPermissionSeeder.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/app/database/seeds/SettingsSeeder.php" />
-        <option value="$PROJECT_DIR$/app/controllers/DepartmentController.php" />
-        <option value="$PROJECT_DIR$/app/validators/UserValidator.php" />
-        <option value="$PROJECT_DIR$/app/controllers/DriveController.php" />
-        <option value="$PROJECT_DIR$/app/models/Drive/Drive.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185656_create_files_table.php" />
-        <option value="$PROJECT_DIR$/app/views/emails/auth/validate.blade.php" />
-        <option value="$PROJECT_DIR$/app/config/local/mail.php" />
-        <option value="$PROJECT_DIR$/app/config/client.php" />
-        <option value="$PROJECT_DIR$/app/config/local/client.php" />
-        <option value="$PROJECT_DIR$/app/models/Drive/File.php" />
-        <option value="$PROJECT_DIR$/app/controllers/FileController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/NotificationController.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_09_05_072152_create_project_file_table.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/models/Permission/DepartmentPermission.php" />
-        <option value="$PROJECT_DIR$/app/models/Permission/Permission.php" />
-        <option value="$PROJECT_DIR$/app/start/bindings.php" />
-        <option value="$PROJECT_DIR$/app/start/global.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185707_create_projects_table.php" />
-        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
-        <option value="$PROJECT_DIR$/app/helpers/MimeType.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProjectStageController.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProjectController.php" />
-        <option value="$PROJECT_DIR$/app/models/Company/ProjectStage.php" />
-        <option value="$PROJECT_DIR$/app/models/FileAttachments.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
-        <option value="$PROJECT_DIR$/app/models/Membership/User.php" />
-        <option value="$PROJECT_DIR$/app/models/Company/Project.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ProjectCommentController.php" />
-        <option value="$PROJECT_DIR$/app/models/Company/ProjectComment.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/DepartmentPermissionObserver.php" />
         <option value="$PROJECT_DIR$/app/database/seeds/DepartmentSeeder.php" />
-        <option value="$PROJECT_DIR$/app/config/production/app.php" />
-        <option value="$PROJECT_DIR$/bootstrap/start.php" />
-        <option value="$PROJECT_DIR$/app/config/production/database.php" />
-        <option value="$PROJECT_DIR$/fast_commit.txt" />
-        <option value="$PROJECT_DIR$/app/config/production/mail.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_08_28_185608_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/controllers/APIController.php" />
-        <option value="$PROJECT_DIR$/app/config/production/client.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Drive/DriveUserAccessTrait.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Social/NotificationUserAccessTrait.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php" />
+        <option value="$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Builder.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Membership/UserActiveScope.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Membership/UserActiveTrait.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/Permission.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/ProjectCommentObserver.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/ProjectObserver.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/DepartmentObserver.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Observers/UserObserver.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Company/Department.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/BaseModel.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Company/Project.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Company/ProjectComment.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Social/Notification.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Drive/Drive.php" />
+        <option value="$PROJECT_DIR$/app/controllers/EmailValidationController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/BaseController.php" />
+        <option value="$PROJECT_DIR$/app/config/permissions.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/DrivePermission.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/FilePermission.php" />
+        <option value="$PROJECT_DIR$/app/controllers/FileController.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/DepartmentPermission.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/ProjectCommentPermission.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/ProjectPermission.php" />
+        <option value="$PROJECT_DIR$/app/observers.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SessionController.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Company/ProjectStage.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Permissions/UserPermission.php" />
+        <option value="$PROJECT_DIR$/app/Cane/UserSession.php" />
+        <option value="$PROJECT_DIR$/app/filters.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DepartmentController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/DriveController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProjectCommentController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ProjectController.php" />
+        <option value="$PROJECT_DIR$/app/controllers/UserController.php" />
+        <option value="$PROJECT_DIR$/app/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Membership/User.php" />
+        <option value="$PROJECT_DIR$/app/Cane/Models/Drive/File.php" />
       </list>
     </option>
   </component>
@@ -212,7 +169,69 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="bootstrap" />
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drives" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="drive1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="albums" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="profile" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -244,69 +263,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="production" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="api" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="config" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="local" />
+              <option name="myItemId" value="Cane" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -317,7 +274,7 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="D:/Tutorials/chat-app" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistory" value="UR&#10;(&#10;Com" />
+    <property name="SearchEverywhereHistory" value="&#10;UR&#10;(&#10;Com" />
     <property name="options.lastSelected" value="preferences.sourceCode.General" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -376,46 +333,25 @@
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44390243" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44390243" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5121951" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24924472" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21148036" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64878047" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64878047" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.64878047" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.35271904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USERS">
@@ -431,291 +367,387 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/emails/auth/validate.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Observers/FileObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="64" selection-start="185" selection-end="185" vertical-scroll-proportion="0.27079645" vertical-offset="0" max-vertical-offset="565" />
+        <state line="20" column="5" selection-start="512" selection-end="512" vertical-scroll-proportion="0.44227353" vertical-offset="91" max-vertical-offset="680">
+          <folding>
+            <element signature="e#33#59#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/mail.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Observers/ProjectCommentObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="22" selection-start="44" selection-end="44" vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565" />
+        <state line="2" column="0" selection-start="33" selection-end="33" vertical-scroll-proportion="-0.23801066" vertical-offset="168" max-vertical-offset="731">
+          <folding>
+            <element signature="e#33#65#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Relations/BelongsToMany.php">
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185608_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="564" column="20" selection-start="14356" selection-end="14356" vertical-scroll-proportion="0.34839925" vertical-offset="9352" max-vertical-offset="17697" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/FileController.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Observers/UserObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="65" selection-start="875" selection-end="875" vertical-scroll-proportion="0.30195382" vertical-offset="493" max-vertical-offset="1870" />
+        <state line="40" column="7" selection-start="828" selection-end="828" vertical-scroll-proportion="0.54706925" vertical-offset="338" max-vertical-offset="935">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_03_190929_create_notifications_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Permission/DepartmentPermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="67" selection-start="514" selection-end="514" vertical-scroll-proportion="0.6181818" vertical-offset="17" max-vertical-offset="748" />
+        <state line="63" column="0" selection-start="1212" selection-end="1212" vertical-scroll-proportion="1.8117229" vertical-offset="51" max-vertical-offset="1309">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Collection.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Social/Notification.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="131" column="20" selection-start="2505" selection-end="2505" vertical-scroll-proportion="0.33272728" vertical-offset="1908" max-vertical-offset="14178" />
+        <state line="6" column="0" selection-start="105" selection-end="105" vertical-scroll-proportion="0.1811723" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/NotificationController.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/Permission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="41" selection-start="946" selection-end="946" vertical-scroll-proportion="1.2035398" vertical-offset="0" max-vertical-offset="1071" />
+        <state line="7" column="29" selection-start="124" selection-end="124" vertical-scroll-proportion="0.21136767" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185727_create_project_comment_file_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Drive/Drive.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="37" selection-start="372" selection-end="738" vertical-scroll-proportion="0.51224107" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_09_05_072152_create_project_file_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="533" selection-end="533" vertical-scroll-proportion="0.615942" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Permission/DepartmentPermission.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="19" selection-start="350" selection-end="350" vertical-scroll-proportion="0.3681416" vertical-offset="81" max-vertical-offset="1326" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185620_create_user_department_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/filters.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="81" selection-start="795" selection-end="795" vertical-scroll-proportion="0.097345136" vertical-offset="642" max-vertical-offset="1207" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/global.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="84" column="35" selection-start="2643" selection-end="2643" vertical-scroll-proportion="0.83539826" vertical-offset="803" max-vertical-offset="1428" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/start/bindings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="52" selection-start="113" selection-end="113" vertical-scroll-proportion="0.15044248" vertical-offset="0" max-vertical-offset="565" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Permission/Permission.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="5" selection-start="1147" selection-end="1147" vertical-scroll-proportion="1.9557523" vertical-offset="0" max-vertical-offset="1258" />
+        <state line="43" column="27" selection-start="838" selection-end="838" vertical-scroll-proportion="0.3321492" vertical-offset="544" max-vertical-offset="2261">
+          <folding>
+            <element signature="e#36#62#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/BaseController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="0" selection-start="50" selection-end="50" vertical-scroll-proportion="0.12035398" vertical-offset="0" max-vertical-offset="565" />
+        <state line="3" column="0" selection-start="69" selection-end="69" vertical-scroll-proportion="0.09058615" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Drive/File.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/DrivePermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="31" selection-start="222" selection-end="222" vertical-scroll-proportion="0.20353982" vertical-offset="4" max-vertical-offset="2346" />
+        <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.060390763" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185707_create_projects_table.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/FilePermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="53" selection-start="822" selection-end="822" vertical-scroll-proportion="0.4477876" vertical-offset="240" max-vertical-offset="901" />
+        <state line="2" column="0" selection-start="35" selection-end="35" vertical-scroll-proportion="0.060390763" vertical-offset="0" max-vertical-offset="563">
+          <folding>
+            <element signature="e#35#63#0" expanded="false" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/validators/ProjectStageValidator.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Company/Department.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="20" selection-start="180" selection-end="180" vertical-scroll-proportion="0.24070796" vertical-offset="0" max-vertical-offset="565" />
+        <state line="40" column="7" selection-start="798" selection-end="798" vertical-scroll-proportion="1.1172291" vertical-offset="51" max-vertical-offset="901">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/helpers/MimeType.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/ProjectCommentPermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="39" selection-start="5870" selection-end="5870" vertical-scroll-proportion="0.45309734" vertical-offset="1852" max-vertical-offset="4165" />
+        <state line="49" column="7" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.74422735" vertical-offset="397" max-vertical-offset="1003">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProjectStageController.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/ProjectPermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="68" column="5" selection-start="1649" selection-end="1649" vertical-scroll-proportion="0.4283186" vertical-offset="897" max-vertical-offset="1751" />
+        <state line="55" column="7" selection-start="1391" selection-end="1391" vertical-scroll-proportion="0.8490231" vertical-offset="457" max-vertical-offset="1122">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/DepartmentPermission.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1330" column="20" selection-start="32463" selection-end="32463" vertical-scroll-proportion="0.33274338" vertical-offset="22082" max-vertical-offset="51765" />
+        <state line="37" column="58" selection-start="915" selection-end="915" vertical-scroll-proportion="0.54706925" vertical-offset="321" max-vertical-offset="952">
+          <folding>
+            <element signature="e#35#77#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+    <entry file="file://$PROJECT_DIR$/app/database/seeds/UserSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="190" column="26" selection-start="7544" selection-end="7544" vertical-scroll-proportion="0.6980462" vertical-offset="2837" max-vertical-offset="3400" />
+        <state line="4" column="6" selection-start="47" selection-end="47" vertical-scroll-proportion="0.120781526" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ProjectController.php">
+    <entry file="file://$PROJECT_DIR$/app/observers.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="610" selection-end="610" vertical-scroll-proportion="0.3090586" vertical-offset="319" max-vertical-offset="2584" />
+        <state line="2" column="24" selection-start="31" selection-end="31" vertical-scroll-proportion="0.060390763" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Observers/ProjectObserver.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="211" selection-end="211" vertical-scroll-proportion="0.21136767" vertical-offset="0" max-vertical-offset="731" />
+        <state line="28" column="5" selection-start="574" selection-end="574" vertical-scroll-proportion="0.78507996" vertical-offset="0" max-vertical-offset="578">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Company/ProjectStage.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Validators/ProjectValidator.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="7" selection-start="399" selection-end="399" vertical-scroll-proportion="0.5737122" vertical-offset="68" max-vertical-offset="748" />
+        <state line="26" column="20" selection-start="618" selection-end="618" vertical-scroll-proportion="0.59325045" vertical-offset="108" max-vertical-offset="697">
+          <folding>
+            <element signature="e#34#74#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/FileAttachments.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/EmailValidationController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="20" selection-start="580" selection-end="620" vertical-scroll-proportion="0.8490231" vertical-offset="49" max-vertical-offset="782" />
+        <state line="11" column="28" selection-start="220" selection-end="220" vertical-scroll-proportion="-0.55417407" vertical-offset="499" max-vertical-offset="1088">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/albums/profile/user1.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/controllers/NotificationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/albums/profile/user2.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/controllers/PermissionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="59" selection-end="59" vertical-scroll-proportion="0.09058615" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/drives/drive2/535836_559427677425070_1064730600_n.jpg">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/app/controllers/SessionController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="21" selection-start="1521" selection-end="1521" vertical-scroll-proportion="0.9094139" vertical-offset="321" max-vertical-offset="1173">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/BaseModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="23" selection-start="1386" selection-end="1386" vertical-scroll-proportion="0.5026643" vertical-offset="516" max-vertical-offset="1105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Company/ProjectStage.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="17" selection-start="320" selection-end="320" vertical-scroll-proportion="0.36589697" vertical-offset="83" max-vertical-offset="1037">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Company/Project.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="904" selection-end="904" vertical-scroll-proportion="1.4191829" vertical-offset="0" max-vertical-offset="2380">
+          <folding>
+            <element signature="e#38#70#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/UserSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="0" selection-start="157" selection-end="157" vertical-scroll-proportion="0.3623446" vertical-offset="0" max-vertical-offset="563">
+          <folding>
+            <element signature="e#23#32#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Permissions/UserPermission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="7" selection-start="516" selection-end="516" vertical-scroll-proportion="0.5737122" vertical-offset="85" max-vertical-offset="1122">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="0" selection-start="3270" selection-end="3270" vertical-scroll-proportion="0.58" vertical-offset="769" max-vertical-offset="2091" />
+        <state line="16" column="38" selection-start="627" selection-end="627" vertical-scroll-proportion="0.20071048" vertical-offset="159" max-vertical-offset="1054">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Company/Project.php">
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Company/ProjectComment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="7" selection-start="524" selection-end="524" vertical-scroll-proportion="0.3321492" vertical-offset="221" max-vertical-offset="2703" />
+        <state line="31" column="39" selection-start="607" selection-end="607" vertical-scroll-proportion="0.72824156" vertical-offset="117" max-vertical-offset="1088">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Membership/User.php">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Model.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="7" selection-start="504" selection-end="504" vertical-scroll-proportion="0.15097691" vertical-offset="119" max-vertical-offset="3808">
+        <state line="689" column="0" selection-start="14685" selection-end="14685" vertical-scroll-proportion="0.38007382" vertical-offset="11167" max-vertical-offset="51765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/filters.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="576" selection-end="576" vertical-scroll-proportion="0.4724689" vertical-offset="244" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185713_create_project_stages_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/DepartmentController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="79" selection-start="2561" selection-end="2561" vertical-scroll-proportion="0.36412078" vertical-offset="1138" max-vertical-offset="1819">
+          <folding>
+            <element signature="e#6#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ProjectController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="9" selection-start="894" selection-end="894" vertical-scroll-proportion="0.36412078" vertical-offset="271" max-vertical-offset="2363">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ProjectCommentController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="24" selection-start="1370" selection-end="1370" vertical-scroll-proportion="0.78507996" vertical-offset="476" max-vertical-offset="1683" />
+        <state line="37" column="37" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.36412078" vertical-offset="424" max-vertical-offset="2244">
+          <folding>
+            <element signature="e#7#39#0" expanded="true" />
+          </folding>
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/Company/ProjectComment.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/DriveController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="44" selection-start="374" selection-end="374" vertical-scroll-proportion="0.23090586" vertical-offset="227" max-vertical-offset="901" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="35" selection-start="231" selection-end="231" vertical-scroll-proportion="0.42273533" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/seeds/DepartmentSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="29" selection-start="643" selection-end="643" vertical-scroll-proportion="0.5168739" vertical-offset="83" max-vertical-offset="697" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="480" selection-end="480" vertical-scroll-proportion="0.5415929" vertical-offset="0" max-vertical-offset="565">
+        <state line="42" column="23" selection-start="1136" selection-end="1136" vertical-scroll-proportion="0.36363637" vertical-offset="480" max-vertical-offset="1139">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/database.php">
+    <entry file="file://$PROJECT_DIR$/app/config/view.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="1173" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="901">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/app.php">
+    <entry file="file://$PROJECT_DIR$/app/config/session.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="0" selection-end="447" vertical-scroll-proportion="0.48141593" vertical-offset="0" max-vertical-offset="565">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-3.4085257" vertical-offset="1919" max-vertical-offset="2482">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootstrap/start.php">
+    <entry file="file://$PROJECT_DIR$/app/config/services.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="0" selection-start="902" selection-end="902" vertical-scroll-proportion="0.5415929" vertical-offset="0" max-vertical-offset="1224">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/mail.php">
+    <entry file="file://$PROJECT_DIR$/app/controllers/FileController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="0" selection-start="0" selection-end="3991" vertical-scroll-proportion="0.8973451" vertical-offset="1601" max-vertical-offset="2210">
+        <state line="53" column="35" selection-start="1515" selection-end="1515" vertical-scroll-proportion="0.72646534" vertical-offset="441" max-vertical-offset="1394">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/database.php">
+    <entry file="file://$PROJECT_DIR$/app/config/queue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="32" selection-start="843" selection-end="843" vertical-scroll-proportion="-11.615385" vertical-offset="123" max-vertical-offset="714">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.1811723" vertical-offset="102" max-vertical-offset="1547">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/mail.php">
+    <entry file="file://$PROJECT_DIR$/app/config/permissions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="16" selection-start="1468" selection-end="1468" vertical-scroll-proportion="-16.346153" vertical-offset="306" max-vertical-offset="2210">
+        <state line="15" column="39" selection-start="349" selection-end="349" vertical-scroll-proportion="0.45293072" vertical-offset="0" max-vertical-offset="612">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_08_28_185608_create_users_table.php">
+    <entry file="file://$PROJECT_DIR$/app/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="62" selection-start="775" selection-end="775" vertical-scroll-proportion="0.7823009" vertical-offset="51" max-vertical-offset="901">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/APIController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="44" selection-start="390" selection-end="390" vertical-scroll-proportion="0.5415929" vertical-offset="0" max-vertical-offset="578">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="112" column="25" selection-start="2540" selection-end="2541" vertical-scroll-proportion="-12.5" vertical-offset="1579" max-vertical-offset="3859">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="22" selection-start="64" selection-end="64" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="136">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2210">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="2" selection-start="39" selection-end="39" vertical-scroll-proportion="-2.6153846" vertical-offset="0" max-vertical-offset="170">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/local/client.php">
+    <entry file="file://$PROJECT_DIR$/app/config/cache.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="21" selection-start="42" selection-end="42" vertical-scroll-proportion="-1.9615384" vertical-offset="0" max-vertical-offset="170">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-1.8117229" vertical-offset="1020" max-vertical-offset="1615">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/production/client.php">
+    <entry file="file://$PROJECT_DIR$/app/config/auth.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="40" selection-start="61" selection-end="61" vertical-scroll-proportion="0.09375" vertical-offset="0" max-vertical-offset="544">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1309">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="30" selection-start="868" selection-end="868" vertical-scroll-proportion="-0.660746" vertical-offset="848" max-vertical-offset="3400">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/UserController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="13" selection-start="1986" selection-end="1986" vertical-scroll-proportion="1.6618181" vertical-offset="429" max-vertical-offset="2601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Membership/User.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="15" selection-start="325" selection-end="325" vertical-scroll-proportion="-5.8846154" vertical-offset="0" max-vertical-offset="5355">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Cane/Models/Drive/File.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="34" selection-start="775" selection-end="775" vertical-scroll-proportion="0.36412078" vertical-offset="322" max-vertical-offset="1734">
+          <folding>
+            <element signature="e#36#44#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

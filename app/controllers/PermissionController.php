@@ -1,40 +1,10 @@
 <?php
 
-class PermissionController extends APIController {
+class PermissionController extends BaseController {
 
-    /**
-     * @param \Permission\Permission $permissions
-     */
-    public function __construct(\Permission\Permission $permissions)
+    public function index()
     {
-        $this->permissions = $permissions;
+        return Config::get('permissions');
     }
 
-    /**
-     * @param \Company\Department $department
-     * @return mixed
-     */
-    public function getByDepartment(\Company\Department $department)
-    {
-        return $department->permissions;
-    }
-
-    /**
-     * @param \Company\Department $department
-     * @return mixed
-     */
-    public function updateDepartment(\Company\Department $department)
-    {
-        $department->setPermissions(Input::get('permissions'));
-
-        return Response::make(['message' => 'Permissions updated successfully']);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getMe()
-    {
-        return $this->me()->permissions;
-    }
 } 

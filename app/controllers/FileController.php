@@ -1,105 +1,80 @@
 <?php
 
-use Drive\Drive;
-use Drive\File;
+use Cane\Models\Drive\Drive;
+use Cane\Models\Drive\File;
+use Cane\Permissions\DrivePermission;
+use Cane\Validators\FileValidator;
 
-class FileController extends APIController {
+class FileController extends BaseController {
 
     /**
      * @param File $files
      * @param FileValidator $fileValidator
      * @param Drive $drives
+     * @param Cane\Permissions\DrivePermission $drivePermission
+     * @param Cane\Permissions\FilePermission $filePermission
      */
-    public function __construct(File $files, FileValidator $fileValidator, Drive $drives)
+    public function __construct(File $files, FileValidator $fileValidator, Drive $drives,
+                                DrivePermission $drivePermission, \Cane\Permissions\FilePermission $filePermission)
     {
         $this->files = $files;
         $this->drives = $drives;
         $this->fileValidator = $fileValidator;
+        $this->drivePermission = $drivePermission;
+        $this->filePermission = $filePermission;
     }
 
     /**
-     * @param Drive $drive
+     * @param Cane\Models\Drive\Drive $drive
      * @return mixed
      */
-    public function getByDrive(Drive $drive)
+    public function index(Drive $drive)
     {
-        $this->mustOwnDrive($drive);
+        if(! $this->drivePermission->canSee($drive)) {
+
+            $this->noAccess("You can't access this drive");
+        }
 
         return $drive->files;
     }
 
     /**
-     * @param Drive $drive
+     * @param Cane\Models\Drive\Drive $drive
      * @return File
      */
-    public function uploadToDrive(Drive $drive)
+    public function store(Drive $drive)
     {
-        $basePath = public_path('drives');
-        $baseUrl = URL::to('public/drives');
+        if(! $this->filePermission->canCreate($drive)) {
 
-        $file = $this->files->uploadAndCreate($drive, $basePath, $baseUrl, Input::file('file'));
+            $this->noAccess("You can't create files in this drive");
+        }
 
-        return $file;
+        $this->fileValidator->validateOrFail($data = Input::all());
+
+        return $this->files->uploadAndCreate($drive, Input::file('file'));
     }
 
     /**
-     * @return File
-     */
-    public function uploadToMainDrive()
-    {
-        return $this->uploadToDrive($this->drives->getMain($this->me()));
-    }
-
-    /**
-     * @param Drive $drive
-     * @return mixed
-     */
-    public function getDriveImages(Drive $drive)
-    {
-        $this->mustOwnDrive($drive);
-
-        return $drive->getImages();
-    }
-
-    /**
-     * @param Drive $drive
-     * @return mixed
-     */
-    public function getDriveDocuments(Drive $drive)
-    {
-        $this->mustOwnDrive($drive);
-
-        return $drive->getDocuments();
-    }
-
-    /**
-     * Delete file from drive only and no other place is affected.
+     * Detach file from my drive then check if this file doesn't exist in other drives to permanently delete it
      *
-     * @param Drive $drive
-     * @param File $file
+     * @param Cane\Models\Drive\Drive $drive
+     * @param Cane\Models\Drive\File $file
+     * @return mixed
      */
     public function destroy(Drive $drive, File $file)
     {
-        $this->mustOwnDrive($drive);
+        if(! $this->filePermission->canDelete($drive, $file)) {
 
-        if(! $drive->hasFile($file)) {
-
-            return Response::make(['message' => 'This file doesn\'t exist in this drive'], 400);
+            $this->noAccess("You can't delete files from this drive");
         }
 
-        $file->delete();
+        $file->drives()->detach($drive);
+
+        if($file->drives()->count() == 0) {
+
+            $file->delete();
+        }
 
         return Response::make(['message' => 'File deleted successfully.']);
     }
-
-    /**
-     * @param Drive $drive
-     */
-    protected function mustOwnDrive(Drive $drive)
-    {
-        if(! $this->isThisMe($drive->user)) {
-
-            App::abort(403, 'You don\'t have access on this drive.');
-        }
-    }
-} 
+}

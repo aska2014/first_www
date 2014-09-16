@@ -1,148 +1,137 @@
 <?php
 
-use Company\Project;
-use Membership\User;
+use Cane\Models\Company\Project;
+use Cane\Permissions\ProjectPermission;
+use Cane\UserSession;
+use Cane\Validators\ProjectValidator;
 
-class ProjectController extends APIController {
+class ProjectController extends BaseController {
 
     /**
      * @param Project $projects
      * @param ProjectValidator $projectValidator
+     * @param UserSession $userSession
+     * @param Cane\Permissions\ProjectPermission $projectPermission
      */
-    public function __construct(Project $projects, ProjectValidator $projectValidator)
+    public function __construct(Project $projects, ProjectValidator $projectValidator,
+                                UserSession $userSession, ProjectPermission $projectPermission)
     {
         $this->projects = $projects;
         $this->projectValidator = $projectValidator;
-    }
-
-    /**
-     * Get all projects
-     */
-    public function getAll()
-    {
-        return $this->projects->all();
+        $this->userSession = $userSession;
+        $this->projectPermission = $projectPermission;
     }
 
     /**
      * @return mixed
      */
-    public function getMe()
+    public function index()
     {
-        return $this->projects->byUser($this->me())->get();
+        $query = $this->projects;
+
+        switch(Input::get('role')) {
+            // Get all projects approved by this user
+            case 'approver':
+                $query = $query->byApprover($this->userSession->user());
+                break;
+            // Get all projects created by this user
+            case 'creator':
+                $query = $query->byCreator($this->userSession->user());
+                break;
+            // Get all projects where this user in team
+            case 'team':
+                $query = $query->inTeam($this->userSession->user());
+                break;
+            default:
+
+                // Check if you have permission to see all projects
+                if(! $this->projectPermission->canSeeAll()) {
+
+                    $this->noAccess("You don't have access to see all projects");
+                }
+                break;
+        }
+
+        return $query->get();
     }
 
     /**
-     * @param Project $project
+     * @param Cane\Models\Company\Project $project
      * @return Project
      */
     public function show(Project $project)
     {
-        $this->mustByWorkingOn($project);
+        if(! $this->projectPermission->canSee($project)) {
 
-        return $project;
+            $this->noAccess("You can't see this project");
+        }
+
+        return $project->load('stages', 'files', 'team');
     }
 
     /**
      * Create new project
      */
-    public function create()
+    public function store()
     {
-        $validator = $this->projectValidator->make(Input::all());
+        if(! $this->projectPermission->canCreate()) {
 
-        if($validator->fails())
-        {
-            return Response::make($validator->messages(), 400);
+            $this->noAccess("You can't create projects");
         }
 
-        return $this->me()->createdProjects()->create(Input::all());
+        $this->projectValidator->validateOrFail($data = Input::all());
+
+        return $this->projects->create($data);
     }
 
     /**
      * Update project
      *
-     * @param Project $project
-     * @return \Company\Project
+     * @param Cane\Models\Company\Project $project
+     * @return mixed
      */
     public function update(Project $project)
     {
-        $validator = $this->projectValidator->make(Input::all());
+        if(! $this->projectPermission->canUpdate($project)) {
 
-        if($validator->fails())
-        {
-            return Response::make($validator->messages(), 400);
+            $this->noAccess("You can't update this project");
         }
 
-        $project->update(Input::all());
+        $this->projectValidator->validateOrFail($data = Input::all());
 
-        return $project;
+        $project->update($data);
+
+        if(Input::has('files')) {
+
+            $project->setFiles(Input::get('files'));
+        }
+
+        if(Input::has('team')) {
+
+            $project->setTeam(Input::get('team'));
+        }
+
+        if(Input::has('stages')) {
+
+            $project->setStages(Input::get('stages'));
+        }
+
+        return $project->load('stages', 'files', 'team');
     }
 
     /**
-     * @param Project $project
+     * @param Cane\Models\Company\Project $project
      * @return mixed
-     */
-    public function accept(Project $project)
-    {
-        $project->accept();
-
-        return Response::make(['message' => 'Project accepted.']);
-    }
-
-    /**
-     * @param Project $project
-     * @param User $user
-     */
-    public function addUser(Project $project, User $user)
-    {
-        $project->users()->attach($user);
-
-        return Response::make(['message' => 'User added successfully.']);
-    }
-
-    /**
-     * @param Project $project
-     * @param User $user
-     */
-    public function removeUser(Project $project, User $user)
-    {
-        $project->users()->detach($user);
-
-        return Response::make(['message' => 'User removed successfully.']);
-    }
-
-    /**
-     * @param Project $project
-     * @return mixed
-     */
-    public function setUsers(Project $project)
-    {
-        $project->users()->sync(Input::get('user_ids'));
-
-        return Response::make(['message' => 'Project users set successfully.']);
-    }
-
-    /**
-     * @param Project $project
      */
     public function destroy(Project $project)
     {
+        if(! $this->projectPermission->canDelete($project)) {
+
+            $this->noAccess("You can't delete this project");
+        }
+
         $project->delete();
 
         return Response::make(['message' => 'Project deleted.']);
-    }
-
-
-    /**
-     * Check if user has access to this project or abort
-     *
-     * @param $project
-     */
-    protected function mustByWorkingOn(Project $project)
-    {
-        // If project doesn't have user
-        if(! $project->checkUserAccess($this->me())) {
-
-            App::abort(403, 'You don\'t have access to this project.');
-        }
     }
 }

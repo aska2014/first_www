@@ -1,60 +1,31 @@
 <?php
 
-use Company\Project;
-use Membership\User;
-use Social\Notification;
+use Cane\Models\Social\Notification;
 
-class NotificationController extends APIController {
+class NotificationController extends BaseController {
 
     /**
      * @param Notification $notifications
-     * @param Membership\User $users
+     * @param Cane\UserSession $userSession
      */
-    public function __construct(Notification $notifications, \Membership\User $users)
+    public function __construct(Notification $notifications, \Cane\UserSession $userSession)
     {
         $this->notifications = $notifications;
-        $this->users = $users;
+        $this->userSession = $userSession;
     }
 
     /**
-     * Get new notifications
+     * Display a listing of the resource
      */
-    public function getNew()
+    public function index()
     {
-        $last_online = $this->me()->online_at;
+        $query = $this->notifications;
 
-        return $this->notifications->newerThan($last_online)->get();
-    }
+        if(Input::has('newer_than')) {
 
-    /**
-     * Notify all registered users except me
-     *
-     * @return static
-     */
-    public function notifyAll()
-    {
-        $allUsers = $this->users->except($this->me())->get();
+            $query = $query->newerThan(Input::get('newer_than'));
+        }
 
-        $this->notifications->newInstance(Input::all())
-            ->notifyUsers($allUsers);
-    }
-
-    /**
-     * Notify all project users except me
-     *
-     * @param Project $project
-     */
-    public function notifyProjectUsers(Project $project)
-    {
-        $me = $this->me();
-
-        // Get all project users except me
-        $allUsers = $project->users->filter(function(User $user) use($me)
-        {
-            return !$user->compare($me);
-        });
-
-        $this->notifications->newInstance(Input::all())
-            ->notifyUsers($allUsers);
+        return $query->get();
     }
 }

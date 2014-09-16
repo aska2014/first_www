@@ -1,35 +1,53 @@
 <?php
 
-use Drive\Drive;
+use Cane\Models\Drive\Drive;
+use Cane\Permissions\DrivePermission;
+use Cane\Validators\DriveValidator;
 
-class DriveController extends APIController {
+class DriveController extends BaseController{
 
     /**
      * @param Drive $drives
      * @param DriveValidator $driveValidator
+     * @param Cane\UserSession $userSession
+     * @param Cane\Permissions\DrivePermission $drivePermission
      */
-    public function __construct(Drive $drives, DriveValidator $driveValidator)
+    public function __construct(Drive $drives, DriveValidator $driveValidator, \Cane\UserSession $userSession, DrivePermission $drivePermission)
     {
         $this->drives = $drives;
         $this->driveValidator = $driveValidator;
+        $this->userSession = $userSession;
+        $this->drivePermission = $drivePermission;
     }
 
     /**
      * @return mixed
      */
-    public function getMe()
+    public function index()
     {
-        return $this->me()->drives;
+        return $this->drives->byUser($this->userSession->user())->get();
     }
 
     /**
-     * Get my main drive
-     * If I have no drives then create a new drive with my id and return it
      * @return mixed
      */
-    public function getMain()
+    public function main()
     {
-        return $this->drives->getMain($this->me());
+        return $this->drives->getMain($this->userSession->user())->load('files');
+    }
+
+    /**
+     * @param Cane\Models\Drive\Drive $drive
+     * @return \Illuminate\Support\Collection|static
+     */
+    public function show(Drive $drive)
+    {
+        if(! $this->drivePermission->canSee($drive)) {
+
+            $this->noAccess("You can't access this drive");
+        }
+
+        return $drive->load('files');
     }
 
     /**
@@ -37,31 +55,10 @@ class DriveController extends APIController {
      *
      * @return static
      */
-    public function create()
+    public function store()
     {
-        $validator = $this->driveValidator->make(Input::all());
-
-        if($validator->fails()) {
-
-            return Response::make($validator->messages(), 400);
-        }
+        $this->driveValidator->validateOrFail($data = Input::all());
 
         return $this->drives->create(Input::all());
-    }
-
-    /**
-     * @param Drive $drive
-     * @return \Drive\Drive
-     */
-    public function destroy(Drive $drive)
-    {
-        if(! $this->isThisMe($drive->user)) {
-
-            App::abort(403, 'You don\'t have access on this drive.');
-        }
-
-        $drive->delete();
-
-        return Response::make(['message' => 'You have deleted the drive successfully.']);
     }
 }

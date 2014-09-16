@@ -11,3 +11,16 @@ App::error(function(\Symfony\Component\HttpKernel\Exception\HttpException $excep
         return Response::make(['message' => $exception->getMessage()], 403);
     }
 });
+
+
+App::error(function(\Cane\Exceptions\AccessDeniedException $exception) {
+
+    return Response::make(['message' => $exception->getMessage()], 403);
+});
+
+App::error(function(\Cane\Exceptions\ValidationException $exception) {
+
+    return Response::make($exception->getAllMessages()->all(), 400);
+});
+
+

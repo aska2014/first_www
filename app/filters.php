@@ -1,6 +1,8 @@
 <?php
 
 
+use Cane\Models\Membership\User;
+
 App::before(function($request)
 {
 });
@@ -19,30 +21,23 @@ Route::filter('auth', function()
 	{
         App::abort(401, 'You must login to make this request.');
 	}
+
+    // Check if user is active. This is necessary because admins can block users after they are logged in
+    // Blocking a user means to set active to 0
+    if(! Auth::user()->active) {
+
+        Auth::logout();
+        App::abort(401, 'You must login to make this request.');
+    }
 });
 
 
 /**
- * Authorize that the authenticated user has the following permission
+ * Check user in to the application
  */
-Route::filter('permissions', function()
+Route::filter('checkIn', function()
 {
-    $permissions = func_get_args();
-
-    // Leave first two objects (route and request)
-    array_shift($permissions);
-    array_shift($permissions);
-
-    // Check if user is authenticated
-    if(! Auth::check())
-    {
-        App::abort(401, 'You must login to make this request.');
-    }
-    // Check if he has permission
-    else if(! empty($permissions) && ! App::make('Permission\Permission')->hasAll($permissions))
-    {
-        App::abort(403, 'You don\'t have permission to this resource.');
-    }
+    Auth::user()->checkIn();
 });
 
 /*
