@@ -81,7 +81,24 @@ class ProjectController extends BaseController {
 
         $this->projectValidator->validateOrFail($data = Input::all());
 
-        return $this->projects->create($data);
+        $project = $this->projects->create($data);
+
+        if(Input::has('files')) {
+
+            $project->setFiles(Input::get('files'));
+        }
+
+        if(Input::has('team')) {
+
+            $project->setTeam(Input::get('team'));
+        }
+
+        if(Input::has('stages')) {
+
+            $project->setStages(Input::get('stages'));
+        }
+
+        return $project;
     }
 
     /**
