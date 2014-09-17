@@ -27,7 +27,7 @@ class ProjectController extends BaseController {
      */
     public function index()
     {
-        $query = $this->projects;
+        $query = $this->projects->with('creator');
 
         switch(Input::get('role')) {
             // Get all projects approved by this user

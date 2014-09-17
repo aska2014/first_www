@@ -46,6 +46,12 @@ Route::group(['prefix' => 'api/v1'], function() {
         $user = \Cane\Models\Membership\User::find(1);
         $user->departments()->attach(1);
     });
+
+    Route::get('reset-all/kareem-mohamed', function() {
+        Artisan::call('drop:db');
+        Artisan::call('migrate');
+        Artisan::call('db:seed');
+    });
 });
 
 Route::model('department', 'Cane\Models\Company\Department');
