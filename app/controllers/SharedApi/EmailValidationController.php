@@ -2,7 +2,7 @@
 
 use Aska\Membership\Models\User;
 use BaseController;
-use Response, Input, URL, Mail, Config;
+use Response, Input, URL, Mail, Config, Redirect;
 
 class EmailValidationController extends BaseController {
 
