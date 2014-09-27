@@ -121,8 +121,8 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-        // 'Intervention\Image\ImageServiceProvider',
-        // 'Lifeentity\Images\ImagesServiceProvider'
+    'Intervention\Image\ImageServiceProvider',
+    'Lifeentity\Images\ImagesServiceProvider'
 	),
 
 	/*
