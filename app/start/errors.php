@@ -1,26 +1,41 @@
 <?php
 
-App::error(function(\Symfony\Component\HttpKernel\Exception\HttpException $exception, $code) {
+use Aska\Exceptions\ForbiddenException;
+use Aska\Exceptions\UnauthorizedException;
+use Aska\Exceptions\ValidationException;
 
-    if($code == 401) {
+App::error(function(UnauthorizedException $exception) {
 
-        return Response::make(['message' => $exception->getMessage()], 401);
+    if(Request::ajax() || Request::wantsJson()) {
 
-    } else if($code == 403) {
+        return Response::make(['message' => 'You need to login to make this request.'], 401);
 
-        return Response::make(['message' => $exception->getMessage()], 403);
+    } else {
+
+        return Redirect::route('login');
     }
 });
 
+App::error(function(ForbiddenException $exception) {
 
-App::error(function(\Cane\Exceptions\AccessDeniedException $exception) {
+    if(Request::ajax() || Request::wantsJson()) {
 
-    return Response::make(['message' => $exception->getMessage()], 403);
+        return Response::make(['message' => $exception->getMessage()], 403);
+
+    } else {
+
+        return Redirect::route('noaccess');
+    }
 });
 
-App::error(function(\Cane\Exceptions\ValidationException $exception) {
+App::error(function(ValidationException $exception) {
 
-    return Response::make($exception->getAllMessages()->all(), 400);
+    if(Request::ajax() || Request::wantsJson()) {
+
+        return Response::make($exception->getAllMessages()->all(), 400);
+
+    } else {
+
+        return Redirect::back()->with('errors', $exception->getAllMessages()->all());
+    }
 });
-
-

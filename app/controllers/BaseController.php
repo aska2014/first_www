@@ -1,14 +1,51 @@
 <?php
 
+use Aska\Exceptions\ForbiddenException;
+use Aska\Exceptions\ValidationException;
+
 class BaseController extends \Illuminate\Routing\Controller {
 
     /**
-     * @param $message
-     * @throws Cane\Exceptions\AccessDeniedException
+     * @param $name
      */
-    public function noAccess($message)
+    public function setPage($name)
     {
-        throw new \Cane\Exceptions\AccessDeniedException($message);
+        if(Lang::has('pages.'.$name)) {
+
+            $page = new StdClass();
+
+            $page->title = Lang::get('pages.'.$name.'.title');
+            $page->description = Lang::get('pages.'.$name.'.description');
+
+            View::share('page', $page);
+        }
+    }
+
+    /**
+     * @param $inputs
+     * @param $rules
+     * @throws ValidationException
+     * @return \Illuminate\Validation\Validator
+     */
+    protected function validateOrFail($inputs, $rules)
+    {
+        $validator = Validator::make($inputs, $rules);
+
+        if($validator->fails()) {
+
+            throw new ValidationException($validator->messages());
+        }
+
+        return $validator;
+    }
+
+    /**
+     * @param $message
+     * @throws ForbiddenException
+     */
+    public function forbidden($message)
+    {
+        throw new ForbiddenException($message);
     }
 
     /**

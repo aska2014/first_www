@@ -23,7 +23,7 @@ return array(
 		'mysql' => array(
 			'driver'    => 'mysql',
 			'host'      => 'localhost',
-			'database'  => 'firstchoice_company_api',
+			'database'  => 'firstchoice_www',
 			'username'  => 'root',
 			'password'  => '',
 			'charset'   => 'utf8',

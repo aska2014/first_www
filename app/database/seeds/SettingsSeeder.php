@@ -1,5 +1,6 @@
 <?php
-use Cane\Models\Settings;
+
+use Aska\App\Settings;
 
 class SettingsSeeder extends \Illuminate\Database\Seeder {
 

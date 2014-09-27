@@ -18,7 +18,7 @@ class CreateProjectFileTable extends Migration {
 			$table->increments('id');
 
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('project_id')->references('id')->on('bms_projects')->onDelete('CASCADE')->onUpdate('CASCADE');
 
             $table->integer('file_id')->unsigned();
             $table->foreign('file_id')->references('id')->on('files')->onDelete('CASCADE')->onUpdate('CASCADE');

@@ -5,7 +5,7 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "intervention/image": "2.*"
+        "lifeentity/images": "dev-master"
 	},
 	"autoload": {
 		"classmap": [
@@ -16,7 +16,7 @@
 			"app/tests/TestCase.php"
 		],
         "psr-0": {
-            "Cane": "app/"
+            "Aska": "app/"
         }
 	},
 	"scripts": {

@@ -1,6 +1,6 @@
 <?php
-use Cane\Models\Company\Department;
-use Cane\Models\Permission\DepartmentPermission;
+use Aska\BMS\Models\Department;
+use Aska\BMS\Models\DepartmentPermission;
 
 class DepartmentSeeder extends \Illuminate\Database\Seeder {
 
@@ -13,8 +13,14 @@ class DepartmentSeeder extends \Illuminate\Database\Seeder {
             'name' => 'administrative'
         ));
 
-        // Add all permissions to administrators
-        foreach(Config::get('permissions') as $permission) {
+        // Add all bms permissions to administrators
+        foreach(Config::get('permissions.bms') as $permission) {
+
+            $administrative->permissions()->create(array('name' => $permission['name']));
+        }
+
+        // Add all site permissions to administrators
+        foreach(Config::get('permissions.site') as $permission) {
 
             $administrative->permissions()->create(array('name' => $permission['name']));
         }

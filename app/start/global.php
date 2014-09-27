@@ -84,5 +84,6 @@ require app_path().'/start/errors.php';
 
 // Don't register observers if running from CLI
 if(!App::runningInConsole()) {
+
     require app_path().'/observers.php';
 }

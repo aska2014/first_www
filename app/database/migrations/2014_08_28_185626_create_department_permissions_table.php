@@ -20,7 +20,7 @@ class CreateDepartmentPermissionsTable extends Migration {
             $table->string('name');
 
             $table->integer('department_id')->unsigned();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('department_id')->references('id')->on('bms_departments')->onDelete('CASCADE')->onUpdate('CASCADE');
 
             $table->timestamps();
 		});

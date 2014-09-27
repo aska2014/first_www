@@ -1,6 +1,7 @@
 <?php
 
-use Cane\Models\Membership\User;
+
+use Aska\Membership\Models\User;
 
 class UserSeeder extends \Illuminate\Database\Seeder {
 

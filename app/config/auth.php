@@ -28,7 +28,7 @@ return array(
 	|
 	*/
 
-	'model' => 'Cane\Models\Membership\User',
+	'model' => 'Aska\Membership\Models\User',
 
 	/*
 	|--------------------------------------------------------------------------

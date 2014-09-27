@@ -12,7 +12,7 @@ class CreateProjectStagesTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('project_stages', function(Blueprint $table)
+		Schema::create('bms_project_stages', function(Blueprint $table)
 		{
             $table->engine = 'InnoDB';
 			$table->increments('id');
@@ -22,7 +22,7 @@ class CreateProjectStagesTable extends Migration {
             $table->date('end_date');
 
             $table->integer('project_id')->unsigned();
-            $table->foreign('project_id')->references('id')->on('projects')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('project_id')->references('id')->on('bms_projects')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 			$table->timestamps();
 		});

@@ -21,7 +21,7 @@ class CreateUserDepartmentTable extends Migration {
             $table->foreign('user_id')->references('id')->on('users')->onDelete('CASCADE')->onUpdate('CASCADE');
 
             $table->integer('department_id')->unsigned();
-            $table->foreign('department_id')->references('id')->on('departments')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('department_id')->references('id')->on('bms_departments')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 		});
 	}

@@ -1,72 +1,142 @@
-+--------+----------------------------------------------------------+--------------------------------+----------------------------------------+----------------+---------------+
-| Domain | URI                                                      | Name                           | Action                                 | Before Filters | After Filters |
-+--------+----------------------------------------------------------+--------------------------------+----------------------------------------+----------------+---------------+
-|        | POST api/v1/email-validation/send-email                  |                                | EmailValidationController@sendEmail    |                |               |
-|        | GET|HEAD api/v1/email-validation/validate/{user}         | email.validate                 | EmailValidationController@validateUser |                |               |
-|        | POST api/v1/session/login                                |                                | SessionController@login                |                |               |
-|        | POST api/v1/session/logout                               |                                | SessionController@logout               |                |               |
-|        | POST api/v1/user/register                                |                                | UserController@register                |                |               |
-|        | GET|HEAD api/v1/session/logout                           |                                | SessionController@logout               | auth, checkIn  |               |
-|        | GET|HEAD api/v1/department                               | api.v1.department.index        | DepartmentController@index             | auth, checkIn  |               |
-|        | GET|HEAD api/v1/department/create                        | api.v1.department.create       | DepartmentController@create            | auth, checkIn  |               |
-|        | POST api/v1/department                                   | api.v1.department.store        | DepartmentController@store             | auth, checkIn  |               |
-|        | GET|HEAD api/v1/department/{department}                  | api.v1.department.show         | DepartmentController@show              | auth, checkIn  |               |
-|        | GET|HEAD api/v1/department/{department}/edit             | api.v1.department.edit         | DepartmentController@edit              | auth, checkIn  |               |
-|        | PUT api/v1/department/{department}                       | api.v1.department.update       | DepartmentController@update            | auth, checkIn  |               |
-|        | PATCH api/v1/department/{department}                     |                                | DepartmentController@update            | auth, checkIn  |               |
-|        | DELETE api/v1/department/{department}                    | api.v1.department.destroy      | DepartmentController@destroy           | auth, checkIn  |               |
-|        | PUT api/v1/user/accept/{user}                            |                                | UserController@accept                  | auth, checkIn  |               |
-|        | PUT api/v1/user/refuse/{user}                            |                                | UserController@refuse                  | auth, checkIn  |               |
-|        | GET|HEAD api/v1/user                                     | api.v1.user.index              | UserController@index                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/user/create                              | api.v1.user.create             | UserController@create                  | auth, checkIn  |               |
-|        | POST api/v1/user                                         | api.v1.user.store              | UserController@store                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/user/{user}                              | api.v1.user.show               | UserController@show                    | auth, checkIn  |               |
-|        | GET|HEAD api/v1/user/{user}/edit                         | api.v1.user.edit               | UserController@edit                    | auth, checkIn  |               |
-|        | PUT api/v1/user/{user}                                   | api.v1.user.update             | UserController@update                  | auth, checkIn  |               |
-|        | PATCH api/v1/user/{user}                                 |                                | UserController@update                  | auth, checkIn  |               |
-|        | DELETE api/v1/user/{user}                                | api.v1.user.destroy            | UserController@destroy                 | auth, checkIn  |               |
-|        | PUT api/v1/project/accept                                |                                | ProjectController@accept               | auth, checkIn  |               |
-|        | PUT api/v1/project/refuse                                |                                | ProjectController@refuse               | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project                                  | api.v1.project.index           | ProjectController@index                | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/create                           | api.v1.project.create          | ProjectController@create               | auth, checkIn  |               |
-|        | POST api/v1/project                                      | api.v1.project.store           | ProjectController@store                | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}                        | api.v1.project.show            | ProjectController@show                 | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}/edit                   | api.v1.project.edit            | ProjectController@edit                 | auth, checkIn  |               |
-|        | PUT api/v1/project/{project}                             | api.v1.project.update          | ProjectController@update               | auth, checkIn  |               |
-|        | PATCH api/v1/project/{project}                           |                                | ProjectController@update               | auth, checkIn  |               |
-|        | DELETE api/v1/project/{project}                          | api.v1.project.destroy         | ProjectController@destroy              | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}/comment                | api.v1.project.comment.index   | ProjectCommentController@index         | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}/comment/create         | api.v1.project.comment.create  | ProjectCommentController@create        | auth, checkIn  |               |
-|        | POST api/v1/project/{project}/comment                    | api.v1.project.comment.store   | ProjectCommentController@store         | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}/comment/{comment}      | api.v1.project.comment.show    | ProjectCommentController@show          | auth, checkIn  |               |
-|        | GET|HEAD api/v1/project/{project}/comment/{comment}/edit | api.v1.project.comment.edit    | ProjectCommentController@edit          | auth, checkIn  |               |
-|        | PUT api/v1/project/{project}/comment/{comment}           | api.v1.project.comment.update  | ProjectCommentController@update        | auth, checkIn  |               |
-|        | PATCH api/v1/project/{project}/comment/{comment}         |                                | ProjectCommentController@update        | auth, checkIn  |               |
-|        | DELETE api/v1/project/{project}/comment/{comment}        | api.v1.project.comment.destroy | ProjectCommentController@destroy       | auth, checkIn  |               |
-|        | GET|HEAD api/v1/notification                             | api.v1.notification.index      | NotificationController@index           | auth, checkIn  |               |
-|        | GET|HEAD api/v1/notification/create                      | api.v1.notification.create     | NotificationController@create          | auth, checkIn  |               |
-|        | POST api/v1/notification                                 | api.v1.notification.store      | NotificationController@store           | auth, checkIn  |               |
-|        | GET|HEAD api/v1/notification/{notification}              | api.v1.notification.show       | NotificationController@show            | auth, checkIn  |               |
-|        | GET|HEAD api/v1/notification/{notification}/edit         | api.v1.notification.edit       | NotificationController@edit            | auth, checkIn  |               |
-|        | PUT api/v1/notification/{notification}                   | api.v1.notification.update     | NotificationController@update          | auth, checkIn  |               |
-|        | PATCH api/v1/notification/{notification}                 |                                | NotificationController@update          | auth, checkIn  |               |
-|        | DELETE api/v1/notification/{notification}                | api.v1.notification.destroy    | NotificationController@destroy         | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/main                               |                                | DriveController@main                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive                                    | api.v1.drive.index             | DriveController@index                  | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/create                             | api.v1.drive.create            | DriveController@create                 | auth, checkIn  |               |
-|        | POST api/v1/drive                                        | api.v1.drive.store             | DriveController@store                  | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}                            | api.v1.drive.show              | DriveController@show                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}/edit                       | api.v1.drive.edit              | DriveController@edit                   | auth, checkIn  |               |
-|        | PUT api/v1/drive/{drive}                                 | api.v1.drive.update            | DriveController@update                 | auth, checkIn  |               |
-|        | PATCH api/v1/drive/{drive}                               |                                | DriveController@update                 | auth, checkIn  |               |
-|        | DELETE api/v1/drive/{drive}                              | api.v1.drive.destroy           | DriveController@destroy                | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}/file                       | api.v1.drive.file.index        | FileController@index                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}/file/create                | api.v1.drive.file.create       | FileController@create                  | auth, checkIn  |               |
-|        | POST api/v1/drive/{drive}/file                           | api.v1.drive.file.store        | FileController@store                   | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}/file/{file}                | api.v1.drive.file.show         | FileController@show                    | auth, checkIn  |               |
-|        | GET|HEAD api/v1/drive/{drive}/file/{file}/edit           | api.v1.drive.file.edit         | FileController@edit                    | auth, checkIn  |               |
-|        | PUT api/v1/drive/{drive}/file/{file}                     | api.v1.drive.file.update       | FileController@update                  | auth, checkIn  |               |
-|        | PATCH api/v1/drive/{drive}/file/{file}                   |                                | FileController@update                  | auth, checkIn  |               |
-|        | DELETE api/v1/drive/{drive}/file/{file}                  | api.v1.drive.file.destroy      | FileController@destroy                 | auth, checkIn  |               |
-|        | GET|HEAD api/v1/test                                     |                                | Closure                                |                |               |
-+--------+----------------------------------------------------------+--------------------------------+----------------------------------------+----------------+---------------+
++--------+---------------------------------------------------------------+--------------------------------------+--------------------------------------------------+----------------+---------------+
+| Domain | URI                                                           | Name                                 | Action                                           | Before Filters | After Filters |
++--------+---------------------------------------------------------------+--------------------------------------+--------------------------------------------------+----------------+---------------+
+|        | GET|HEAD images/{path}/gen/{cached_image}                     | cached.image                         | Lifeentity\Images\CachedImageController@display  |                |               |
+|        | GET|HEAD no-access                                            | noaccess                             | Closure                                          |                |               |
+|        | GET|HEAD login                                                | login                                | Closure                                          |                |               |
+|        | POST shared/api/v1/email-validation/send-email                |                                      | SharedApi\EmailValidationController@sendEmail    |                |               |
+|        | GET|HEAD shared/api/v1/email-validation/validate/{user}       | email.validate                       | SharedApi\EmailValidationController@validateUser |                |               |
+|        | POST shared/api/v1/session/login                              |                                      | SharedApi\SessionController@login                |                |               |
+|        | POST shared/api/v1/session/logout                             |                                      | SharedApi\SessionController@logout               |                |               |
+|        | POST shared/api/v1/user/register                              |                                      | SharedApi\UserController@register                |                |               |
+|        | GET|HEAD shared/api/v1/session/logout                         |                                      | SharedApi\SessionController@logout               |                |               |
+|        | PUT shared/api/v1/user/accept/{user}                          |                                      | SharedApi\UserController@accept                  | auth, checkIn  |               |
+|        | PUT shared/api/v1/user/refuse/{user}                          |                                      | SharedApi\UserController@refuse                  | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/user/session                           |                                      | SharedApi\UserController@session                 | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/user                                   | shared.api.v1.user.index             | SharedApi\UserController@index                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/user/create                            | shared.api.v1.user.create            | SharedApi\UserController@create                  | auth, checkIn  |               |
+|        | POST shared/api/v1/user                                       | shared.api.v1.user.store             | SharedApi\UserController@store                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/user/{user}                            | shared.api.v1.user.show              | SharedApi\UserController@show                    | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/user/{user}/edit                       | shared.api.v1.user.edit              | SharedApi\UserController@edit                    | auth, checkIn  |               |
+|        | PUT shared/api/v1/user/{user}                                 | shared.api.v1.user.update            | SharedApi\UserController@update                  | auth, checkIn  |               |
+|        | PATCH shared/api/v1/user/{user}                               |                                      | SharedApi\UserController@update                  | auth, checkIn  |               |
+|        | DELETE shared/api/v1/user/{user}                              | shared.api.v1.user.destroy           | SharedApi\UserController@destroy                 | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/notification                           | shared.api.v1.notification.index     | SharedApi\NotificationController@index           | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/notification/create                    | shared.api.v1.notification.create    | SharedApi\NotificationController@create          | auth, checkIn  |               |
+|        | POST shared/api/v1/notification                               | shared.api.v1.notification.store     | SharedApi\NotificationController@store           | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/notification/{notification}            | shared.api.v1.notification.show      | SharedApi\NotificationController@show            | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/notification/{notification}/edit       | shared.api.v1.notification.edit      | SharedApi\NotificationController@edit            | auth, checkIn  |               |
+|        | PUT shared/api/v1/notification/{notification}                 | shared.api.v1.notification.update    | SharedApi\NotificationController@update          | auth, checkIn  |               |
+|        | PATCH shared/api/v1/notification/{notification}               |                                      | SharedApi\NotificationController@update          | auth, checkIn  |               |
+|        | DELETE shared/api/v1/notification/{notification}              | shared.api.v1.notification.destroy   | SharedApi\NotificationController@destroy         | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/department                             | shared.api.v1.department.index       | SharedApi\DepartmentController@index             | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/department/create                      | shared.api.v1.department.create      | SharedApi\DepartmentController@create            | auth, checkIn  |               |
+|        | POST shared/api/v1/department                                 | shared.api.v1.department.store       | SharedApi\DepartmentController@store             | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/department/{department}                | shared.api.v1.department.show        | SharedApi\DepartmentController@show              | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/department/{department}/edit           | shared.api.v1.department.edit        | SharedApi\DepartmentController@edit              | auth, checkIn  |               |
+|        | PUT shared/api/v1/department/{department}                     | shared.api.v1.department.update      | SharedApi\DepartmentController@update            | auth, checkIn  |               |
+|        | PATCH shared/api/v1/department/{department}                   |                                      | SharedApi\DepartmentController@update            | auth, checkIn  |               |
+|        | DELETE shared/api/v1/department/{department}                  | shared.api.v1.department.destroy     | SharedApi\DepartmentController@destroy           | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/main                             |                                      | SharedApi\DriveController@main                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive                                  | shared.api.v1.drive.index            | SharedApi\DriveController@index                  | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/create                           | shared.api.v1.drive.create           | SharedApi\DriveController@create                 | auth, checkIn  |               |
+|        | POST shared/api/v1/drive                                      | shared.api.v1.drive.store            | SharedApi\DriveController@store                  | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}                          | shared.api.v1.drive.show             | SharedApi\DriveController@show                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}/edit                     | shared.api.v1.drive.edit             | SharedApi\DriveController@edit                   | auth, checkIn  |               |
+|        | PUT shared/api/v1/drive/{drive}                               | shared.api.v1.drive.update           | SharedApi\DriveController@update                 | auth, checkIn  |               |
+|        | PATCH shared/api/v1/drive/{drive}                             |                                      | SharedApi\DriveController@update                 | auth, checkIn  |               |
+|        | DELETE shared/api/v1/drive/{drive}                            | shared.api.v1.drive.destroy          | SharedApi\DriveController@destroy                | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}/file                     | shared.api.v1.drive.file.index       | SharedApi\FileController@index                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}/file/create              | shared.api.v1.drive.file.create      | SharedApi\FileController@create                  | auth, checkIn  |               |
+|        | POST shared/api/v1/drive/{drive}/file                         | shared.api.v1.drive.file.store       | SharedApi\FileController@store                   | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}/file/{file}              | shared.api.v1.drive.file.show        | SharedApi\FileController@show                    | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/drive/{drive}/file/{file}/edit         | shared.api.v1.drive.file.edit        | SharedApi\FileController@edit                    | auth, checkIn  |               |
+|        | PUT shared/api/v1/drive/{drive}/file/{file}                   | shared.api.v1.drive.file.update      | SharedApi\FileController@update                  | auth, checkIn  |               |
+|        | PATCH shared/api/v1/drive/{drive}/file/{file}                 |                                      | SharedApi\FileController@update                  | auth, checkIn  |               |
+|        | DELETE shared/api/v1/drive/{drive}/file/{file}                | shared.api.v1.drive.file.destroy     | SharedApi\FileController@destroy                 | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/permission/bms                         |                                      | SharedApi\PermissionController@bms               | auth, checkIn  |               |
+|        | GET|HEAD shared/api/v1/permission/site                        |                                      | SharedApi\PermissionController@site              | auth, checkIn  |               |
+|        | PUT bms/api/v1/project/accept                                 |                                      | BMSApi\ProjectController@accept                  | auth, checkIn  |               |
+|        | PUT bms/api/v1/project/refuse                                 |                                      | BMSApi\ProjectController@refuse                  | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project                                   | bms.api.v1.project.index             | BMSApi\ProjectController@index                   | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/create                            | bms.api.v1.project.create            | BMSApi\ProjectController@create                  | auth, checkIn  |               |
+|        | POST bms/api/v1/project                                       | bms.api.v1.project.store             | BMSApi\ProjectController@store                   | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}                         | bms.api.v1.project.show              | BMSApi\ProjectController@show                    | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}/edit                    | bms.api.v1.project.edit              | BMSApi\ProjectController@edit                    | auth, checkIn  |               |
+|        | PUT bms/api/v1/project/{project}                              | bms.api.v1.project.update            | BMSApi\ProjectController@update                  | auth, checkIn  |               |
+|        | PATCH bms/api/v1/project/{project}                            |                                      | BMSApi\ProjectController@update                  | auth, checkIn  |               |
+|        | DELETE bms/api/v1/project/{project}                           | bms.api.v1.project.destroy           | BMSApi\ProjectController@destroy                 | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}/comment                 | bms.api.v1.project.comment.index     | BMSApi\ProjectCommentController@index            | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}/comment/create          | bms.api.v1.project.comment.create    | BMSApi\ProjectCommentController@create           | auth, checkIn  |               |
+|        | POST bms/api/v1/project/{project}/comment                     | bms.api.v1.project.comment.store     | BMSApi\ProjectCommentController@store            | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}/comment/{comment}       | bms.api.v1.project.comment.show      | BMSApi\ProjectCommentController@show             | auth, checkIn  |               |
+|        | GET|HEAD bms/api/v1/project/{project}/comment/{comment}/edit  | bms.api.v1.project.comment.edit      | BMSApi\ProjectCommentController@edit             | auth, checkIn  |               |
+|        | PUT bms/api/v1/project/{project}/comment/{comment}            | bms.api.v1.project.comment.update    | BMSApi\ProjectCommentController@update           | auth, checkIn  |               |
+|        | PATCH bms/api/v1/project/{project}/comment/{comment}          |                                      | BMSApi\ProjectCommentController@update           | auth, checkIn  |               |
+|        | DELETE bms/api/v1/project/{project}/comment/{comment}         | bms.api.v1.project.comment.destroy   | BMSApi\ProjectCommentController@destroy          | auth, checkIn  |               |
+|        | POST site/api/v1/image/product/{product}                      |                                      | SiteApi\ImageController@product                  | auth, checkIn  |               |
+|        | POST site/api/v1/image/product-category/{productCategory}     |                                      | SiteApi\ImageController@productCategory          | auth, checkIn  |               |
+|        | POST site/api/v1/image/service/{service}                      |                                      | SiteApi\ImageController@service                  | auth, checkIn  |               |
+|        | POST site/api/v1/image/service-category/{serviceCategory}     |                                      | SiteApi\ImageController@serviceCategory          | auth, checkIn  |               |
+|        | POST site/api/v1/image/slider-item/{sliderItem}               |                                      | SiteApi\ImageController@sliderItem               | auth, checkIn  |               |
+|        | DELETE site/api/v1/image/{image}                              |                                      | SiteApi\ImageController@destroy                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product                                  | site.api.v1.product.index            | SiteApi\ProductController@index                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product/create                           | site.api.v1.product.create           | SiteApi\ProductController@create                 | auth, checkIn  |               |
+|        | POST site/api/v1/product                                      | site.api.v1.product.store            | SiteApi\ProductController@store                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product/{product}                        | site.api.v1.product.show             | SiteApi\ProductController@show                   | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product/{product}/edit                   | site.api.v1.product.edit             | SiteApi\ProductController@edit                   | auth, checkIn  |               |
+|        | PUT site/api/v1/product/{product}                             | site.api.v1.product.update           | SiteApi\ProductController@update                 | auth, checkIn  |               |
+|        | PATCH site/api/v1/product/{product}                           |                                      | SiteApi\ProductController@update                 | auth, checkIn  |               |
+|        | DELETE site/api/v1/product/{product}                          | site.api.v1.product.destroy          | SiteApi\ProductController@destroy                | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product-category                         | site.api.v1.product-category.index   | SiteApi\ProductCategoryController@index          | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product-category/create                  | site.api.v1.product-category.create  | SiteApi\ProductCategoryController@create         | auth, checkIn  |               |
+|        | POST site/api/v1/product-category                             | site.api.v1.product-category.store   | SiteApi\ProductCategoryController@store          | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product-category/{product_category}      | site.api.v1.product-category.show    | SiteApi\ProductCategoryController@show           | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/product-category/{product_category}/edit | site.api.v1.product-category.edit    | SiteApi\ProductCategoryController@edit           | auth, checkIn  |               |
+|        | PUT site/api/v1/product-category/{product_category}           | site.api.v1.product-category.update  | SiteApi\ProductCategoryController@update         | auth, checkIn  |               |
+|        | PATCH site/api/v1/product-category/{product_category}         |                                      | SiteApi\ProductCategoryController@update         | auth, checkIn  |               |
+|        | DELETE site/api/v1/product-category/{product_category}        | site.api.v1.product-category.destroy | SiteApi\ProductCategoryController@destroy        | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service                                  | site.api.v1.service.index            | SiteApi\ServiceController@index                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service/create                           | site.api.v1.service.create           | SiteApi\ServiceController@create                 | auth, checkIn  |               |
+|        | POST site/api/v1/service                                      | site.api.v1.service.store            | SiteApi\ServiceController@store                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service/{service}                        | site.api.v1.service.show             | SiteApi\ServiceController@show                   | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service/{service}/edit                   | site.api.v1.service.edit             | SiteApi\ServiceController@edit                   | auth, checkIn  |               |
+|        | PUT site/api/v1/service/{service}                             | site.api.v1.service.update           | SiteApi\ServiceController@update                 | auth, checkIn  |               |
+|        | PATCH site/api/v1/service/{service}                           |                                      | SiteApi\ServiceController@update                 | auth, checkIn  |               |
+|        | DELETE site/api/v1/service/{service}                          | site.api.v1.service.destroy          | SiteApi\ServiceController@destroy                | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service-category                         | site.api.v1.service-category.index   | SiteApi\ServiceCategoryController@index          | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service-category/create                  | site.api.v1.service-category.create  | SiteApi\ServiceCategoryController@create         | auth, checkIn  |               |
+|        | POST site/api/v1/service-category                             | site.api.v1.service-category.store   | SiteApi\ServiceCategoryController@store          | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service-category/{service_category}      | site.api.v1.service-category.show    | SiteApi\ServiceCategoryController@show           | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/service-category/{service_category}/edit | site.api.v1.service-category.edit    | SiteApi\ServiceCategoryController@edit           | auth, checkIn  |               |
+|        | PUT site/api/v1/service-category/{service_category}           | site.api.v1.service-category.update  | SiteApi\ServiceCategoryController@update         | auth, checkIn  |               |
+|        | PATCH site/api/v1/service-category/{service_category}         |                                      | SiteApi\ServiceCategoryController@update         | auth, checkIn  |               |
+|        | DELETE site/api/v1/service-category/{service_category}        | site.api.v1.service-category.destroy | SiteApi\ServiceCategoryController@destroy        | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/project                                  | site.api.v1.project.index            | SiteApi\ProjectController@index                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/project/create                           | site.api.v1.project.create           | SiteApi\ProjectController@create                 | auth, checkIn  |               |
+|        | POST site/api/v1/project                                      | site.api.v1.project.store            | SiteApi\ProjectController@store                  | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/project/{project}                        | site.api.v1.project.show             | SiteApi\ProjectController@show                   | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/project/{project}/edit                   | site.api.v1.project.edit             | SiteApi\ProjectController@edit                   | auth, checkIn  |               |
+|        | PUT site/api/v1/project/{project}                             | site.api.v1.project.update           | SiteApi\ProjectController@update                 | auth, checkIn  |               |
+|        | PATCH site/api/v1/project/{project}                           |                                      | SiteApi\ProjectController@update                 | auth, checkIn  |               |
+|        | DELETE site/api/v1/project/{project}                          | site.api.v1.project.destroy          | SiteApi\ProjectController@destroy                | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider                                   | site.api.v1.slider.index             | SiteApi\SliderController@index                   | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider/create                            | site.api.v1.slider.create            | SiteApi\SliderController@create                  | auth, checkIn  |               |
+|        | POST site/api/v1/slider                                       | site.api.v1.slider.store             | SiteApi\SliderController@store                   | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider/{slider}                          | site.api.v1.slider.show              | SiteApi\SliderController@show                    | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider/{slider}/edit                     | site.api.v1.slider.edit              | SiteApi\SliderController@edit                    | auth, checkIn  |               |
+|        | PUT site/api/v1/slider/{slider}                               | site.api.v1.slider.update            | SiteApi\SliderController@update                  | auth, checkIn  |               |
+|        | PATCH site/api/v1/slider/{slider}                             |                                      | SiteApi\SliderController@update                  | auth, checkIn  |               |
+|        | DELETE site/api/v1/slider/{slider}                            | site.api.v1.slider.destroy           | SiteApi\SliderController@destroy                 | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider-item                              | site.api.v1.slider-item.index        | SiteApi\SliderItemController@index               | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider-item/create                       | site.api.v1.slider-item.create       | SiteApi\SliderItemController@create              | auth, checkIn  |               |
+|        | POST site/api/v1/slider-item                                  | site.api.v1.slider-item.store        | SiteApi\SliderItemController@store               | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider-item/{slider_item}                | site.api.v1.slider-item.show         | SiteApi\SliderItemController@show                | auth, checkIn  |               |
+|        | GET|HEAD site/api/v1/slider-item/{slider_item}/edit           | site.api.v1.slider-item.edit         | SiteApi\SliderItemController@edit                | auth, checkIn  |               |
+|        | PUT site/api/v1/slider-item/{slider_item}                     | site.api.v1.slider-item.update       | SiteApi\SliderItemController@update              | auth, checkIn  |               |
+|        | PATCH site/api/v1/slider-item/{slider_item}                   |                                      | SiteApi\SliderItemController@update              | auth, checkIn  |               |
+|        | DELETE site/api/v1/slider-item/{slider_item}                  | site.api.v1.slider-item.destroy      | SiteApi\SliderItemController@destroy             | auth, checkIn  |               |
+|        | GET|HEAD test                                                 |                                      | Closure                                          |                |               |
+|        | GET|HEAD command-line                                         |                                      | Closure                                          |                |               |
+|        | POST command-line                                             |                                      | Closure                                          |                |               |
++--------+---------------------------------------------------------------+--------------------------------------+--------------------------------------------------+----------------+---------------+

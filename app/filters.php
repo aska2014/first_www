@@ -1,12 +1,37 @@
 <?php
 
 
-use Cane\Models\Membership\User;
+use Aska\Exceptions\UnauthorizedException;
 
 App::before(function($request)
 {
-});
+    // Set locale language
+    App::setLocale(App::make('Aska\Language')->get());
 
+    //@refactor
+    View::share('language', App::make('Aska\Language')->get());
+
+
+    // If this was a request from a different domain
+    if(isset($_SERVER['HTTP_REFERER'])) {
+
+        $allowedOrigins = [
+            'http://app.firstchoice.dev', 'http://admin.firstchoice.dev',
+            'http://app.firstchoice.cc', 'http://admin.firstchoice.cc'
+        ];
+
+        foreach($allowedOrigins as $allowedOrigin) {
+
+            if(strpos($_SERVER['HTTP_REFERER'], $allowedOrigin) === 0) {
+
+                header('Access-Control-Allow-Origin: '.$allowedOrigin);
+                header('Access-Control-Allow-Methods: POST, PUT, DELETE, GET, OPTIONS');
+                header('Access-Control-Allow-Credentials: true');
+                header('Access-Control-Allow-Headers: Content-Type');
+            }
+        }
+    }
+});
 
 App::after(function($request, $response)
 {
@@ -17,17 +42,18 @@ App::after(function($request, $response)
  */
 Route::filter('auth', function()
 {
-	if (Auth::guest())
-	{
-        App::abort(401, 'You must login to make this request.');
-	}
+    if (Auth::guest())
+    {
+        throw new UnauthorizedException();
+    }
 
     // Check if user is active. This is necessary because admins can block users after they are logged in
     // Blocking a user means to set active to 0
     if(! Auth::user()->active) {
 
         Auth::logout();
-        App::abort(401, 'You must login to make this request.');
+
+        throw new UnauthorizedException();
     }
 });
 

@@ -21,7 +21,7 @@ class CreateProjectStageFileTable extends Migration {
             $table->foreign('file_id')->references('id')->on('files')->onDelete('CASCADE')->onUpdate('CASCADE');
 
             $table->integer('project_stage_id')->unsigned();
-            $table->foreign('project_stage_id')->references('id')->on('project_stages')->onDelete('CASCADE')->onUpdate('CASCADE');
+            $table->foreign('project_stage_id')->references('id')->on('bms_project_stages')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 			$table->timestamps();
 		});

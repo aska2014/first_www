@@ -12,3 +12,4 @@
 */
 
 Artisan::add(new DropDBCommand());
+Artisan::add(new ResetAllCommand());

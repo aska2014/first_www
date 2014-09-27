@@ -1,6 +1,43 @@
 <?php
 
-Route::group(['prefix' => 'api/v1'], function() {
+Route::get('/no-access', ['as' => 'noaccess', function() {
+    dd('You don\'t have access to this resource');
+}]);
+
+
+Route::get('login', ['as' => 'login', function() {
+    dd("Login page");
+}]);
+
+
+
+
+/// Site routes
+Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
+
+Route::get('/products.html', ['as' => 'products', 'uses' => 'ProductsController@index']);
+Route::get('/{category}/products.html', ['as' => 'product.category', 'uses' => 'ProductsController@category']);
+Route::get('/product/{product}.html', ['as' => 'product', 'uses' => 'ProductsController@show']);
+
+Route::get('/services.html', ['as' => 'services', 'uses' => 'ServicesController@index']);
+Route::get('/{service}/services.html', ['as' => 'service.category', 'uses' => 'ServicesController@category']);
+Route::get('/service/{service}.html', ['as' => 'service', 'uses' => 'ServicesController@show']);
+
+Route::get('/projects.html', ['as' => 'projects', 'uses' => 'ProjectsController@index']);
+Route::get('/projects/{project}.html', ['as' => 'project', 'uses' => 'ProjectsController@show']);
+
+Route::get('change-language/{lan}', ['as' => 'language', function($lan) {
+
+    App::make('Aska\Language')->set($lan);
+
+    return Redirect::back();
+}]);
+
+
+
+
+// Shared Api
+Route::group(['prefix' => 'shared/api/v1', 'namespace' => 'SharedApi'], function() {
 
     // Email validation routes
     Route::post('email-validation/send-email', 'EmailValidationController@sendEmail');
@@ -13,54 +50,153 @@ Route::group(['prefix' => 'api/v1'], function() {
     // Register new user
     Route::post('user/register', 'UserController@register');
 
-    // Only logged in users
+    Route::get('session/logout', 'SessionController@logout');
+
     Route::group(['before' => 'auth|checkIn'], function() {
-
-        Route::get('session/logout', 'SessionController@logout');
-
-        Route::get('permission', 'PermissionController@index');
-
-        Route::resource('department', 'DepartmentController');
 
         Route::put('user/accept/{user}', 'UserController@accept');
         Route::put('user/refuse/{user}', 'UserController@refuse');
         Route::get('user/session', 'UserController@session');
         Route::resource('user', 'UserController');
-
-        Route::put('project/accept', 'ProjectController@accept');
-        Route::put('project/refuse', 'ProjectController@refuse');
-        Route::resource('project', 'ProjectController');
-
-        Route::resource('project.comment', 'ProjectCommentController');
-
         Route::resource('notification', 'NotificationController');
+
+        Route::resource('department', 'DepartmentController');
 
         Route::get('drive/main', 'DriveController@main');
         Route::resource('drive', 'DriveController');
         Route::resource('drive.file', 'FileController');
-    });
 
-    Route::get('test', function() {
-
-        // Set me administrator
-        $user = \Cane\Models\Membership\User::find(1);
-        $user->departments()->attach(1);
-    });
-
-    Route::get('reset-all/kareem-mohamed', function() {
-        Artisan::call('drop:db');
-        Artisan::call('migrate');
-        Artisan::call('db:seed');
+        Route::get('permission/bms', 'PermissionController@bms');
+        Route::get('permission/site', 'PermissionController@site');
     });
 });
 
-Route::model('department', 'Cane\Models\Company\Department');
-Route::model('user', 'Cane\Models\Membership\User');
 
-Route::model('project', 'Cane\Models\Company\Project');
-Route::model('comment', 'Cane\Models\Company\ProjectComment');
 
-Route::model('notification', 'Cane\Models\SocialNotification');
 
-Route::model('drive', 'Cane\Models\Drive\Drive');
-Route::model('file', 'Cane\Models\Drive\File');
+
+
+// BMS (Business Management System) Api
+Route::group(['prefix' => 'bms/api/v1', 'before' => 'auth|checkIn', 'namespace' => 'BMSApi'], function() {
+
+    Route::put('project/accept', 'ProjectController@accept');
+    Route::put('project/refuse', 'ProjectController@refuse');
+    Route::resource('project', 'ProjectController');
+
+    Route::resource('project.comment', 'ProjectCommentController');
+});
+
+
+
+
+
+
+
+// Site management system
+Route::group(['namespace' => 'SiteApi', 'prefix' => 'site/api/v1', 'before' => 'auth|checkIn'], function() {
+
+    /// Image handlers
+    Route::post('image/project/{project}', 'ImageController@project');
+    Route::post('image/product/{product}', 'ImageController@product');
+    Route::post('image/product-category/{product_category}', 'ImageController@productCategory');
+    Route::post('image/service/{service}', 'ImageController@service');
+    Route::post('image/service-category/{service_category}', 'ImageController@serviceCategory');
+    Route::post('image/slider-item/{slider_item}', 'ImageController@sliderItem');
+    Route::delete('image/{image}', 'ImageController@destroy');
+    Route::delete('image/all/{ids}', 'ImageController@destroyAll');
+
+
+    Route::resource('product', 'ProductController');
+    Route::resource('product-category', 'ProductCategoryController');
+    Route::resource('service', 'ServiceController');
+    Route::resource('service-category', 'ServiceCategoryController');
+    Route::resource('project', 'ProjectController');
+    Route::resource('slider', 'SliderController');
+    Route::resource('slider-item', 'SliderItemController');
+
+});
+
+
+// Binding models for shared api
+Route::model('user', 'Aska\Membership\Models\User');
+Route::model('notification', 'Aska\Social\Models\Notification');
+Route::model('drive', 'Aska\Drive\Models\Drive');
+Route::model('file', 'Aska\Drive\Models\File');
+Route::model('department', 'Aska\BMS\Models\Department');
+Route::model('image', 'Aska\Media\Models\Image');
+
+
+
+
+
+// Binding to models for bms api
+if(0 === strpos(Request::path(), 'bms')) {
+    Route::model('project', 'Aska\BMS\Models\Project');
+    Route::model('comment', 'Aska\BMS\Models\ProjectComment');
+}
+
+
+
+
+
+
+// Binding to models for site api
+if(0 === strpos(Request::path(), 'site')) {
+    Route::model('project', 'Aska\Site\Models\Project');
+    Route::model('product', 'Aska\Site\Models\Product');
+    Route::model('product_category', 'Aska\Site\Models\ProductCategory');
+    Route::model('service', 'Aska\Site\Models\Service');
+    Route::model('service_category', 'Aska\Site\Models\ServiceCategory');
+    Route::model('slider', 'Aska\Site\Models\Slider');
+    Route::model('slider_item', 'Aska\Site\Models\SliderItem');
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Route::get('test', function() {
+
+    // Set me administrator
+    $user = \Cane\Models\Membership\User::find(1);
+    $user->departments()->attach(1);
+});
+
+
+
+
+
+
+
+// Command line
+Route::get('command-line', function() {
+    echo '<form action="POST">';
+    echo '<input type="text" placeholder="password" />';
+    echo '<input type="text" placeholder="command" />';
+    echo '<input type="submit" />';
+    echo '</form>';
+});
+
+Route::post('command-line', function() {
+    if(Input::get('password') == 'my name is kareem mohamed aly elbahrawy') {
+        if(Input::get('command') == 'reset') {
+            Artisan::call('drop:db');
+            Artisan::call('migrate --force');
+            Artisan::call('db:seed --force');
+        } else {
+            Artisan::call(Input::get('command'));
+        }
+    }
+});
