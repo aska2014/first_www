@@ -168,7 +168,10 @@ if(0 === strpos(Request::path(), 'site')) {
 
 
 
-
+Route::get('remove-me', function() {
+    
+    \Aska\Membership\Models\User::find(1)->delete();
+});
 
 
 Route::get('test', function() {
