@@ -1,7 +1,14 @@
 <header>
     <div class="container">
-        <div class="logo"><a class="brand" href="{{ URL::route('home') }}"> <img src="/images/cleanstart_logo.png" alt="optional logo">
-            </a></div>
+        <div class="logo">
+            <a class="brand" href="{{ URL::route('home') }}">
+                @if($language == 'en')
+                <img src="/images/cleanstart_logo.png" alt="Firstchoice logo">
+                @else
+                <img src="/images/ar_logo.png" alt="Firstchoice logo">
+                @endif
+            </a>
+        </div>
         <div id="mainmenu" class="menu_container">
             <label class="mobile_collapser">{{ trans('header.menu') }}</label>
             <!-- Mobile menu title -->

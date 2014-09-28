@@ -12,4 +12,6 @@ return array(
     'show_all' => 'اظهر الكل',
 
     'read_more' => 'المزيد',
+
+    'certificates_of_accreditation' => 'الشهادات والإعتمادات',
 );

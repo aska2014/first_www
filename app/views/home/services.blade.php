@@ -14,7 +14,7 @@
 
                 <p>{{ $category->description }}</p>
 
-                <div class="centered_button"><a class="btn btn-primary" href="{{ URL::route('services') }}">{{ trans('words.services') }}</a></div>
+                <div class="centered_button"><a class="btn btn-primary" href="{{ URL::route('services') }}">{{ trans('words.read_more') }}</a></div>
             </div>
             @endforeach
         </div>

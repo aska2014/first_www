@@ -42,16 +42,15 @@
         <div class="container">
             <div class="row">
                 <div class="footer_teaser pl_about_us_widget col-sm-4 col-md-4">
-                    <h3>Contact Details</h3>
+                    <h3>{{ trans('footer.contact_details') }}</h3>
 
-                    <p>PLETHORA THEMES
-                        <small>Web-Development Company</small>
+                    <p>{{ $contactDetails->company_name }}
                         <br>
-                        795 Folsom Ave, Suite 600, San Francisco, CA 94107
+                        {{ $contactDetails->address }}
                     </p>
-                    <p><i class="fa fa-envelope"></i> contact@example.com</p>
+                    <p><i class="fa fa-envelope"></i> {{ $contactDetails->email }}</p>
 
-                    <p><i class="fa fa-phone"></i> (+30) 265-9987</p>
+                    <p><i class="fa fa-phone"></i> {{ $contactDetails->mobile_no }}</p>
 
                     <div class="footer_social">
                         <div class="social_wrapper"><a href="https://www.facebook.com/plethorathemes"><i
@@ -60,28 +59,35 @@
                     </div>
                 </div>
                 <div class="footer_teaser pl_latest_news_widget col-sm-4 col-md-4">
-                    <h3>Latest News</h3>
+                    <h3>{{ trans('footer.our_services') }}</h3>
                     <ul class="media-list">
-                        <li class="media"><a href="#" class="media-photo"
-                                             style="background-image:url(images/portfolio/t5-thumb.jpg)"></a> <a
-                                href="#" class="media-date">19<span>FEB</span></a>
-                            <h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a>
+                        @foreach($footerServices as $service)
+                        @if($service->mainImage)
+                        <li class="media"><a href="{{ URL::route('service', $service->slug) }}" class="media-photo"
+                                             style="background-image:url({{ $service->mainImage->addOperation('fit', 70, 70)->cached_url }})"></a> <a
+                                href="{{ URL::route('service', $service->slug) }}" class="media-date">19<span>FEB</span></a>
+                            <h5 class="media-heading"><a href="#">{{ $service->title }}</a>
                             </h5>
 
-                            <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
+                            <p>{{ str_limit($service->long_description, 56, '...') }}</p>
                         </li>
-                        <li class="media"><a href="#" class="media-photo"
-                                             style="background-image:url(images/portfolio/t4-thumb.jpg)"></a> <a
-                                href="#" class="media-date">18<span>FEB</span></a>
-                            <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
-
-                            <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
-                        </li>
+                        @endif
+                        @endforeach
                     </ul>
                 </div>
                 <div class="footer_teaser pl_flickr_widget col-sm-4 col-md-4" id="latest-flickr-images">
-                    <h3>FlickrFeed</h3>
-                    <ul></ul>
+                    <h3>{{ trans('footer.our_products') }}</h3>
+                    <ul>
+                        <?php $i = 0; ?>
+                        @foreach($productImages as $productImage)
+                        <?php $i++ ?>
+                        <li class="flickr-image no-{{$i}}">
+                            <a rel="prettyPhoto" href="{{ $productImage->addOperation('fit', 70, 70)->cached_url }}">
+                                <img src="{{ $productImage->addOperation('fit', 70, 70)->cached_url }}" />
+                            </a>
+                        </li>
+                        @endforeach
+                    </ul>
                 </div>
             </div>
         </div>
@@ -89,8 +95,8 @@
     <div class="copyright">
         <div class="container">
             <div class="row">
-                <div class="col-sm-4 col-md-4">Copyright ©2014 all rights reserved for first choice for sport
-                    courts
+                <div class="col-sm-4 col-md-4">
+                    {{ trans('footer.copyrights') }}
                 </div>
                 <div class="col-sm-4 col-md-4"></div>
             </div>

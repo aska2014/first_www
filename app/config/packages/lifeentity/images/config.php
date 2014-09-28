@@ -6,5 +6,5 @@ return array(
 
     'cache_dir' => 'gen',
 
-    'images_dir' => 'images'
+    'images_dir' => 'albums'
 );

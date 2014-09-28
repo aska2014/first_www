@@ -12,4 +12,6 @@ return array(
     'show_all' => 'Show all',
 
     'read_more' => 'Read more',
+
+    'certificates_of_accreditation' => ' Certificates of Accreditation',
 );

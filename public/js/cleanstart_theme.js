@@ -535,14 +535,14 @@ jQuery(window).load(function(){
     // Flickr feed snippet by css-tricks.com----------------------------------------------------------------
     // For instructions visit http://css-tricks.com/snippets/jquery/show-most-recent-flickr-uploads/
 
-    jQuery.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=37321137@N03&format=json&jsoncallback=?", function(data) {
-              var target = "#latest-flickr-images ul"; // Where is it going?
-              for (var i = 0; i <= 7; i = i + 1) { // Loop through the 8 most recent, [0-9]
-              var pic = data.items[i];
-              var liNumber = i + 1; // Add class to each LI (1-12)
-    	jQuery(target).append("<li class='flickr-image no-" + liNumber + "'><a rel='prettyPhoto' title='" + pic.title + "' href='" + pic.link + "'><img src='" + pic.media.m.replace("_m.jpg","_s.jpg") + "' /></a></li>");
-    	}
-    });
+//    jQuery.getJSON("http://api.flickr.com/services/feeds/photos_public.gne?id=37321137@N03&format=json&jsoncallback=?", function(data) {
+//              var target = "#latest-flickr-images ul"; // Where is it going?
+//              for (var i = 0; i <= 7; i = i + 1) { // Loop through the 8 most recent, [0-9]
+//              var pic = data.items[i];
+//              var liNumber = i + 1; // Add class to each LI (1-12)
+//    	jQuery(target).append("<li class='flickr-image no-" + liNumber + "'><a rel='prettyPhoto' title='" + pic.title + "' href='" + pic.link + "'><img src='" + pic.media.m.replace("_m.jpg","_s.jpg") + "' /></a></li>");
+//    	}
+//    });
 
 
 });

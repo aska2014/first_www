@@ -32,6 +32,14 @@ class Service extends BaseModel {
     }
 
     /**
+     * @return Image
+     */
+    public function getMainImageAttribute()
+    {
+        return $this->images->isEmpty() ? null : $this->images[0];
+    }
+
+    /**
      * @return mixed
      */
     public function getTitleAttribute()

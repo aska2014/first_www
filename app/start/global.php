@@ -86,4 +86,5 @@ require app_path().'/start/errors.php';
 if(!App::runningInConsole()) {
 
     require app_path().'/observers.php';
+    require app_path().'/composers.php';
 }

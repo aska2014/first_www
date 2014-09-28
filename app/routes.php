@@ -113,6 +113,8 @@ Route::group(['namespace' => 'SiteApi', 'prefix' => 'site/api/v1', 'before' => '
     Route::resource('project', 'ProjectController');
     Route::resource('slider', 'SliderController');
     Route::resource('slider-item', 'SliderItemController');
+    Route::resource('info-slider', 'InfoSliderController');
+    Route::resource('contact-detail', 'ContactDetailController');
 
 });
 
@@ -149,6 +151,8 @@ if(0 === strpos(Request::path(), 'site')) {
     Route::model('service_category', 'Aska\Site\Models\ServiceCategory');
     Route::model('slider', 'Aska\Site\Models\Slider');
     Route::model('slider_item', 'Aska\Site\Models\SliderItem');
+    Route::model('info_slider', 'Aska\Site\Models\InfoSlider');
+    Route::model('contact_detail', 'Aska\Site\Models\ContactDetail');
 }
 
 
@@ -170,8 +174,19 @@ if(0 === strpos(Request::path(), 'site')) {
 Route::get('test', function() {
 
     // Set me administrator
-    $user = \Cane\Models\Membership\User::find(1);
-    $user->departments()->attach(1);
+//    $user = \Cane\Models\Membership\User::find(1);
+//    $user->departments()->attach(1);
+
+    $products = \Aska\Site\Models\Service::with('images')->get();
+
+    foreach($products as $product)
+    {
+        foreach($product->images as $image)
+        {
+            echo('<img src="'.$image->addOperation('resize', 50, 50)->cached_url.'" />');
+            exit();
+        }
+    }
 });
 
 
