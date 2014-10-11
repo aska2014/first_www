@@ -21,13 +21,13 @@ class CreateProductsTable extends Migration {
 
             // English information
             $table->string('en_title');
-            $table->string('en_small_description');
-            $table->string('en_long_description');
+            $table->text('en_small_description');
+            $table->text('en_long_description');
 
             // Arabic information
             $table->string('ar_title');
-            $table->string('ar_small_description');
-            $table->string('ar_long_description');
+            $table->text('ar_small_description');
+            $table->text('ar_long_description');
 
             $table->integer('category_id')->unsigned();
             $table->foreign('category_id')->references('id')->on('site_product_categories')->onDelete('CASCADE')->onUpdate('CASCADE');

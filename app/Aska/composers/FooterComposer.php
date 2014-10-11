@@ -3,6 +3,7 @@
 use Aska\Media\Models\Image;
 use Aska\Site\Models\ContactDetail;
 use Aska\Site\Models\Service;
+use Twitter;
 
 class FooterComposer {
 
@@ -28,6 +29,20 @@ class FooterComposer {
         $view->with('footerServices', $this->services->take(2)->get());
 
         $view->with('contactDetails', $this->contactDetails->first());
+
+
+        // We don't need to get tweets on loca environment
+        if(\App::environment() != 'local') {
+            $view->with('tweets', $this->getTweets());
+        }
+    }
+
+    /**
+     * @return mixed
+     */
+    protected function getTweets()
+    {
+        return Twitter::getUserTimeline(array('screen_name' => 'thujohn', 'count' => 5));
     }
 
 } 

@@ -19,8 +19,8 @@ class CreateContactDetailsTable extends Migration {
             $table->string('ar_company_name');
             $table->string('en_company_name');
 
-            $table->string('ar_address');
-            $table->string('en_address');
+            $table->text('ar_address');
+            $table->text('en_address');
 
             $table->string('email');
             $table->string('mobile_no');

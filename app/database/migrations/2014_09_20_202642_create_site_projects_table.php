@@ -21,13 +21,13 @@ class CreateSiteProjectsTable extends Migration {
 
             // English information
             $table->string('en_title');
-            $table->string('en_small_description');
-            $table->string('en_long_description');
+            $table->text('en_small_description');
+            $table->text('en_long_description');
 
             // Arabic information
             $table->string('ar_title');
-            $table->string('ar_small_description');
-            $table->string('ar_long_description');
+            $table->text('ar_small_description');
+            $table->text('ar_long_description');
 
 			$table->timestamps();
 		});

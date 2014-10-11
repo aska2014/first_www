@@ -40,6 +40,9 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="/apple-touch-fa-57x57-precomposed.html">
     <link rel="shortcut icon" href="/favicon.png">
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhCFO56k_xL212g8j2LK88wK0I_CRwzDE&amp;sensor=false"></script>
+
 </head>
 <body class="sticky_header">
 <div class="overflow_wrapper">
@@ -76,8 +79,25 @@
 <script type="text/javascript" src="/js/collapser.js"></script>
 <!--Style Switcher, You probably want to remove this!-->
 <script type="text/javascript" src="/js/style_switcher.js"></script>
+<!-- the Simplrsmoothscroll script is used to smoothly scroll the page -->
+<script src="/js/jquery.mousewheel.min.js"></script>
+<script src="/js/jquery.simplr.smoothscroll.js"></script>
 
-<div class="style_switcher">
+
+<!--To collapse the menu -->
+<script type="text/javascript">
+    //Smooth scrolling on documentation page
+    jQuery('.bs-docs-sidenav a').click(function() {
+        var href = $.attr(this, 'href');
+        jQuery('html, body').animate({
+            scrollTop: jQuery(href).offset().top
+        }, 500, function () {
+            window.location.hash = href;
+        });
+        return false;
+    });
+</script>
+    <div class="style_switcher">
     <div class="gear"><i class="fa fa-language"></i></div>
     <div class="styles">
         <h6> Language </h6>

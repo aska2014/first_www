@@ -15,7 +15,7 @@ class BaseController extends \Illuminate\Routing\Controller {
             $page = new StdClass();
 
             $page->title = Lang::get('pages.'.$name.'.title');
-            $page->description = Lang::get('pages.'.$name.'.description');
+            $page->sub_title = Lang::get('pages.'.$name.'.sub_title');
 
             View::share('page', $page);
         }

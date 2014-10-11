@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateSliderItemsTable extends Migration {
+class CreateNewsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,9 +12,12 @@ class CreateSliderItemsTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('site_slider_items', function(Blueprint $table)
+		Schema::create('news', function(Blueprint $table)
 		{
 			$table->increments('id');
+
+            $table->string('slug')->unique();
+
             // English information
             $table->string('en_title');
             $table->text('en_description');
@@ -22,9 +25,6 @@ class CreateSliderItemsTable extends Migration {
             // Arabic information
             $table->string('ar_title');
             $table->text('ar_description');
-
-            $table->integer('slider_id')->unsigned();
-            $table->foreign('slider_id')->references('id')->on('site_sliders')->onDelete('CASCADE')->onUpdate('CASCADE');
 
 			$table->timestamps();
 		});
@@ -37,7 +37,7 @@ class CreateSliderItemsTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('slider_items');
+		Schema::drop('news');
 	}
 
 }

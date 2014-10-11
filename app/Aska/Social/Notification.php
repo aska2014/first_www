@@ -1,4 +1,4 @@
-<?php namespace Aska\Social\Models;
+<?php namespace Aska\Social;
 
 use Aska\BaseModel;
 use Aska\Membership\Models\User;

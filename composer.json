@@ -5,7 +5,8 @@
 	"license": "MIT",
 	"require": {
 		"laravel/framework": "4.2.*",
-        "lifeentity/images": "dev-master"
+        "lifeentity/images": "dev-master",
+        "thujohn/twitter": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

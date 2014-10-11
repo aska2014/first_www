@@ -21,11 +21,11 @@ class CreateProductCategoriesTable extends Migration {
 
             // English information
             $table->string('en_title');
-            $table->string('en_description');
+            $table->text('en_description');
 
             // Arabic information
             $table->string('ar_title');
-            $table->string('ar_description');
+            $table->text('ar_description');
 
             $table->integer('parent_id')->unsigned()->nullable();
             $table->foreign('parent_id')->references('id')->on('site_product_categories')->onDelete('CASCADE')->onUpdate('CASCADE');

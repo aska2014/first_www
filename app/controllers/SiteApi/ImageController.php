@@ -1,5 +1,7 @@
 <?php namespace SiteApi;
 
+use Aska\ImageHandlers\NewsImage;
+use Aska\ImageHandlers\PageSectionImage;
 use Aska\ImageHandlers\ProductCategoryImage;
 use Aska\ImageHandlers\ProductImage;
 use Aska\ImageHandlers\ServiceCategoryImage;
@@ -7,6 +9,8 @@ use Aska\ImageHandlers\ServiceImage;
 use Aska\ImageHandlers\SiteProjectImage;
 use Aska\ImageHandlers\SliderItemImage;
 use Aska\Media\Models\Image;
+use Aska\Site\Models\News;
+use Aska\Site\Models\PageSection;
 use Aska\Site\Models\Product;
 use Aska\Site\Models\ProductCategory;
 use Aska\Site\Models\Project;
@@ -27,11 +31,12 @@ class ImageController extends \BaseController {
      * @param ImagePermission $imagePermission
      * @param \Aska\Media\Models\Image $images
      * @param SiteProjectImage $projectImage
+     * @param \Aska\ImageHandlers\PageSectionImage $pageSectionImage
      */
     public function __construct(ProductCategoryImage $productCategoryImage, ProductImage $productImage,
                                 ServiceCategoryImage $serviceCategoryImage, ServiceImage $serviceImage,
                                 SliderItemImage $sliderItemImage, ImagePermission $imagePermission,
-                                Image $images, SiteProjectImage $projectImage)
+                                Image $images, SiteProjectImage $projectImage, PageSectionImage $pageSectionImage, NewsImage $newsImage)
     {
 
         $this->productCategoryImage = $productCategoryImage;
@@ -42,6 +47,8 @@ class ImageController extends \BaseController {
         $this->imagePermission = $imagePermission;
         $this->images = $images;
         $this->projectImage = $projectImage;
+        $this->pageSectionImage = $pageSectionImage;
+        $this->newsImage = $newsImage;
     }
 
     /**
@@ -116,6 +123,20 @@ class ImageController extends \BaseController {
     }
 
     /**
+     * @param \Aska\Site\Models\News $news
+     * @return mixed
+     */
+    public function news(News $news)
+    {
+        if(! $this->imagePermission->canCreate()) {
+
+            $this->forbidden("You can't create images");
+        }
+
+        return $this->newsImage->addGalleryImage(Input::file('file'), $news);
+    }
+
+    /**
      * @param SliderItem $sliderItem
      * @return array
      */
@@ -127,6 +148,20 @@ class ImageController extends \BaseController {
         }
 
         return $this->sliderItemImage->setMainImage(Input::file('file'), $sliderItem);
+    }
+
+    /**
+     * @param PageSection $pageSection
+     * @return array
+     */
+    public function pageSection(PageSection $pageSection)
+    {
+        if(! $this->imagePermission->canCreate()) {
+
+            $this->forbidden("You can't create images");
+        }
+
+        return $this->pageSectionImage->setMainImage(Input::file('file'), $pageSection);
     }
 
     /**

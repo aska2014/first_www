@@ -5,27 +5,15 @@
                         class="fa fa-twitter"></i></a></div>
             <div id="twitter_flexslider" class="flexslider">
                 <ul class="slides">
+                    @if(isset($tweets) && is_array($tweets))
+                    @foreach($tweets as $tweet)
                     <li class="item">
                         <blockquote>
-                            <p> This Clean Flexible Multipurpose Bootstrap 3.1.1 HTML5 Template will soon become a
-                                Wordpress theme with great support! <a href="#">http://unhub.com/LIot</a> — Plethora
-                                Themes (@plethorathemes) <a href="https://twitter.com/plethorathemes/">April 4
-                                    2014</a></p>
+                            <p>{{ $tweet->text }}</p>
                         </blockquote>
                     </li>
-                    <li class="item">
-                        <blockquote>
-                            <p> 'Game of Thrones' Opening Sequence Reimagined With Social Media http://flip.it/3AiCh
-                                via @mashable </p>
-                        </blockquote>
-                    </li>
-                    <li class="item">
-                        <blockquote>
-                            <p> SEO expert debunks 5 of the biggest SEO myths @CreativeBloQ
-                                http://www.creativebloq.com/business/seo-expert-debunks-5-biggest-seo-myths-21410786
-                                … </p>
-                        </blockquote>
-                    </li>
+                    @endforeach
+                    @endif
                 </ul>
             </div>
         </div>
@@ -40,6 +28,7 @@
             <div class="square-right"></div>
         </div>
         <div class="container">
+            @if(isset($contactDetails))
             <div class="row">
                 <div class="footer_teaser pl_about_us_widget col-sm-4 col-md-4">
                     <h3>{{ trans('footer.contact_details') }}</h3>
@@ -90,6 +79,7 @@
                     </ul>
                 </div>
             </div>
+            @endif
         </div>
     </section>
     <div class="copyright">

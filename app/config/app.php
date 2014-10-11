@@ -121,8 +121,9 @@ return array(
 		'Illuminate\Validation\ValidationServiceProvider',
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
-    'Intervention\Image\ImageServiceProvider',
-    'Lifeentity\Images\ImagesServiceProvider'
+        'Intervention\Image\ImageServiceProvider',
+        'Lifeentity\Images\ImagesServiceProvider',
+        'Thujohn\Twitter\TwitterServiceProvider',
 	),
 
 	/*
@@ -189,7 +190,8 @@ return array(
 		'URL'             => 'Illuminate\Support\Facades\URL',
 		'Validator'       => 'Illuminate\Support\Facades\Validator',
 		'View'            => 'Illuminate\Support\Facades\View',
-        'Image'           => 'Intervention\Image\Facades\Image'
+        'Image'           => 'Intervention\Image\Facades\Image',
+        'Twitter'         => 'Thujohn\Twitter\TwitterFacade',
 	),
 
 );

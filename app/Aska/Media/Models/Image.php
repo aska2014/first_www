@@ -30,6 +30,16 @@ class Image extends ImageDB {
     /**
      * @return string
      */
+    public function getCachedUrlAttribute()
+    {
+        $url = parent::getCachedUrlAttribute();
+
+        return '/'.ltrim($url, '/');
+    }
+
+    /**
+     * @return string
+     */
     public static function getClass()
     {
         return get_called_class();

@@ -6,6 +6,8 @@ return array(
     'about' => 'عنا',
     'services' => 'الخدمات',
     'products' => 'المنتجات',
-    'projects' => 'المشاريع'
+    'projects' => 'المشاريع',
+    'contact_us' => 'الاتصال بنا',
+    'extra' => 'المزيد'
 
 );

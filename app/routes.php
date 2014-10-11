@@ -9,7 +9,21 @@ Route::get('login', ['as' => 'login', function() {
     dd("Login page");
 }]);
 
+Route::get('/test-validation', function() {
+    $validator = Validator::make(array(
+        'email' => 'asdf',
+    ), array(
+        'email' => 'required|email',
+        'username' => 'required'
+    ));
 
+    return $validator->messages();
+});
+
+
+Route::get('/get-twitter', function() {
+
+});
 
 
 /// Site routes
@@ -25,6 +39,12 @@ Route::get('/service/{service}.html', ['as' => 'service', 'uses' => 'ServicesCon
 
 Route::get('/projects.html', ['as' => 'projects', 'uses' => 'ProjectsController@index']);
 Route::get('/projects/{project}.html', ['as' => 'project', 'uses' => 'ProjectsController@show']);
+
+Route::get('/news/{news}.html', ['as' => 'news', 'uses' => 'NewsController@show']);
+
+Route::get('/p/{page}.html', ['as' => 'page', 'uses' => 'PageController@show']);
+
+Route::get('/contact-us.html', ['as' => 'contact_us', 'uses' => 'ContactUsController@index']);
 
 Route::get('change-language/{lan}', ['as' => 'language', function($lan) {
 
@@ -102,6 +122,8 @@ Route::group(['namespace' => 'SiteApi', 'prefix' => 'site/api/v1', 'before' => '
     Route::post('image/service/{service}', 'ImageController@service');
     Route::post('image/service-category/{service_category}', 'ImageController@serviceCategory');
     Route::post('image/slider-item/{slider_item}', 'ImageController@sliderItem');
+    Route::post('image/page-section/{page_section}', 'ImageController@pageSection');
+    Route::post('image/news/{news}', 'ImageController@news');
     Route::delete('image/{image}', 'ImageController@destroy');
     Route::delete('image/all/{ids}', 'ImageController@destroyAll');
 
@@ -115,6 +137,9 @@ Route::group(['namespace' => 'SiteApi', 'prefix' => 'site/api/v1', 'before' => '
     Route::resource('slider-item', 'SliderItemController');
     Route::resource('info-slider', 'InfoSliderController');
     Route::resource('contact-detail', 'ContactDetailController');
+    Route::resource('page', 'PageController');
+    Route::resource('news', 'NewsController');
+    Route::resource('branch', 'CompanyBranchController');
 
 });
 
@@ -153,6 +178,10 @@ if(0 === strpos(Request::path(), 'site')) {
     Route::model('slider_item', 'Aska\Site\Models\SliderItem');
     Route::model('info_slider', 'Aska\Site\Models\InfoSlider');
     Route::model('contact_detail', 'Aska\Site\Models\ContactDetail');
+    Route::model('page', 'Aska\Site\Models\Page');
+    Route::model('page_section', 'Aska\Site\Models\PageSection');
+    Route::model('news', 'Aska\Site\Models\News');
+    Route::model('branch', 'Aska\Site\Models\CompanyBranch');
 }
 
 
@@ -169,7 +198,7 @@ if(0 === strpos(Request::path(), 'site')) {
 
 
 Route::get('remove-me', function() {
-    
+
     \Aska\Membership\Models\User::find(1)->delete();
 });
 
