@@ -8,7 +8,11 @@
     <div class="square-right"></div>
 </div>
 <div class="container">
+
     <section>
+        @if(Session::has('success'))
+        <div class="alert alert-success" role="alert">{{ Session::get('success') }}</div>
+        @endif
         <div class="row">
             @foreach($branches as $branch)
             <div id="marker-div-{{ $branch->id }}" class="office_address col-sm-6 col-md-4 marker-divs">

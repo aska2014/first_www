@@ -64,5 +64,7 @@ class ContactUsController extends BaseController {
                 $mail->to($email, 'FirstChoice administrator')->subject('Message from FirstChoice');
             });
         }
+
+        return Redirect::back()->with('success', 'Message send successfully');
     }
 }
