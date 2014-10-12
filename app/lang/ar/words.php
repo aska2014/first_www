@@ -4,6 +4,7 @@ return array(
 
     'more_products' => 'المزيد من المنتجات',
     'services' => 'خدمات',
+    'projects' => 'المشاريع',
 
     'date' => 'التاريخ',
     'category' => 'القسم',

@@ -23,7 +23,7 @@
             <div class="bs-docs-section">
                 <h2 id="{{ $section->slug }}" class="page-header">{{ $section->title }}</h2>
                 <p>{{ $section->description }}</p>
-                <img src="{{ $section->image->url }}"  alt="main layout">
+                <img src="{{ $section->image->url }}"  alt="main layout" style="border:0px !important;">
             </div>
             @endforeach
         </div>

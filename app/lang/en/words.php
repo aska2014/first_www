@@ -4,6 +4,7 @@ return array(
 
     'more_products' => 'More products',
     'services' => 'Services',
+    'projects' => 'Projects',
 
     'date' => 'Date',
     'category' => 'Category',

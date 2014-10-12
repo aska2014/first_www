@@ -19,13 +19,16 @@
                 </article>
             </div>
             <div id="sidebar" class="col-sm-4 col-md-4">
-                <aside class="widget">
-                    <h4>Text Widget</h4>
-                    <p>Fugiat dapibus, tellus ac cursus commodo, mauesris condime ntum nibh, ut fermentum mas justo sitters amet risus. Cras mattis cosi sectetut amet fermens etrsaters tum aecenas faucib sadips amets.</p>
-                </aside>
                 <aside class="widget ads clearfix">
-                    <h4>Ads</h4>
-                    <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> <a href="#"><img src="http://placehold.it/110" alt=""></a> </aside>
+                    <h4>{{ trans('words.projects') }}</h4>
+                    @foreach($projects as $project)
+                        @if(! $project->images->isEmpty())
+                        <a href="{{ URL::route('project', $project->slug) }}">
+                            <img src="{{ $project->images->first()->addOperation('fit', 110, 110)->cached_url }}">
+                        </a>
+                        @endif
+                    @endforeach
+                </aside>
                 <aside class="widget">
                     <h4>Tabs</h4>
                     <ul class="nav nav-tabs" id="myTab">
@@ -35,25 +38,30 @@
                     <div class="tab-content" id="myTabContent">
                         <div id="recent" class="tab-pane fade active in">
                             <ul class="media-list">
-                                <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">19<span>FEB</span></a>
-                                    <h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>
-                                    <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
+                                @foreach($recentNews as $oneNews)
+                                <li class="media">
+                                    @if(! $oneNews->images->isEmpty())
+                                    <a href="{{ URL::route('news', $oneNews->slug) }}" class="media-photo" style="background-image:url({{ $oneNews->images->first()->addOperation('fit', 70, 70)->cached_url }})">
+
+                                    </a>
+                                    @endif
+                                    <h5 class="media-heading"><a href="#">{{ $oneNews->title }}</a></h5>
+                                    <p>{{ str_limit($oneNews->description, 30) }}</p>
                                 </li>
-                                <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">18<span>FEB</span></a>
-                                    <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
-                                    <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
-                                </li>
-                                <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t5.jpg)"></a> <a href="#" class="media-date">17<span>FEB</span></a>
-                                    <h5 class="media-heading"><a href="#">Media heading, this is a title of a news...</a></h5>
-                                    <p>Fugiat dapibus, tellus ac cursus commodo, ut fermentum...</p>
-                                </li>
-                                <li class="media"> <a href="#" class="media-photo" style="background-image:url(images/portfolio/t4.jpg)"></a> <a href="#" class="media-date">16<span>FEB</span></a>
-                                    <h5 class="media-heading"><a href="#">Media heading, of a news item.</a></h5>
-                                    <p>Fugiat dapibus, tellus ac cursus commodo, condime ntum nibh, ut fermentum...</p>
-                                </li>
+                                @endforeach
                             </ul>
                         </div>
-                        <div id="tags" class="tab-pane fade"> <a class="label label-default">Default</a> <a class="label label-primary">Primary</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-default">Default</a> <a class="label label-success">Success</a> <a class="label label-success">Success</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-warning">Warning</a> <a class="label label-warning">Warning</a> <a class="label label-danger">Danger</a> <a class="label label-info">Info</a> <a class="label label-inverse">Inverse</a> </div>
+                        <div id="tags" class="tab-pane fade">
+                            <?php
+                                $classes = ['default', 'primary', 'success', 'danger', 'inverse'];
+                            ?>
+                            @foreach($products as $product)
+                            <a class="label label-{{ $classes[rand(0, 4)] }}">{{ $product->title }}</a>
+                            @endforeach
+                            @foreach($services as $service)
+                            <a class="label label-{{ $classes[rand(0, 4)] }}">{{ $service->title }}</a>
+                            @endforeach
+                        </div>
                     </div>
                 </aside>
             </div>
