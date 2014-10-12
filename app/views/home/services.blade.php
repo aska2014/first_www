@@ -8,7 +8,7 @@
             @foreach($serviceCategories as $category)
             <div class="feature_teaser col-sm-4 col-md-4">
 
-                <img alt="responsive" src="{{ $category->image->url }}">
+                <img alt="responsive" src="{{ $category->image->addOperation('fit', 330, 250)->cached_url }}">
 
                 <h3>{{ $category->title }}</h3>
 

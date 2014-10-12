@@ -30,7 +30,6 @@ class FooterComposer {
 
         $view->with('contactDetails', $this->contactDetails->first());
 
-
         // We don't need to get tweets on loca environment
         if(\App::environment() != 'local') {
             $view->with('tweets', $this->getTweets());
