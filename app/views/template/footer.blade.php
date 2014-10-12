@@ -42,9 +42,38 @@
                     <p><i class="fa fa-phone"></i> {{ $contactDetails->mobile_no }}</p>
 
                     <div class="footer_social">
-                        <div class="social_wrapper"><a href="https://www.facebook.com/plethorathemes"><i
-                                    class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-youtube"></i></a> <a
-                                href="#googleplus"><i class="fa fa-google-plus"></i></a></div>
+                        <div class="social_wrapper">
+                            @if($contactDetails->facebook)
+                            <a href="{{ $contactDetails->facebook }}">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+                            @endif
+                            @if($contactDetails->youtube)
+                            <a href="{{ $contactDetails->youtube}}">
+                                <i class="fa fa-youtube"></i>
+                            </a>
+                            @endif
+                            @if($contactDetails->google)
+                            <a href="{{ $contactDetails->google}}">
+                                <i class="fa fa-google-plus"></i>
+                            </a>
+                            @endif
+                            @if($contactDetails->linkedin)
+                            <a href="{{ $contactDetails->linkedin}}">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+                            @endif
+                            @if($contactDetails->instagram)
+                            <a href="{{ $contactDetails->instagram}}">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+                            @endif
+                            @if($contactDetails->twitter)
+                            <a href="{{ $contactDetails->twitter }}">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+                            @endif
+                        </div>
                     </div>
                 </div>
                 <div class="footer_teaser pl_latest_news_widget col-sm-4 col-md-4">

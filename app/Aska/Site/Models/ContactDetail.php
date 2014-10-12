@@ -12,7 +12,8 @@ class ContactDetail extends BaseModel {
     /**
      * @var array
      */
-    protected $fillable = array('en_company_name', 'ar_company_name', 'en_address', 'ar_address', 'email', 'mobile_no');
+    protected $fillable = array('en_company_name', 'ar_company_name', 'en_address', 'ar_address', 'email', 'mobile_no',
+        'facebook', 'twitter', 'instagram', 'linkedin', 'youtube', 'google');
 
     /**
      * @return array
