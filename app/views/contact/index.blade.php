@@ -9,9 +9,9 @@
 </div>
 <div class="container">
     <section>
-        @foreach($branches as $branch)
-        <div class="row marker-divs" id="marker-div-{{ $branch->id }}">
-            <div class="office_address col-sm-6 col-md-4">
+        <div class="row">
+            @foreach($branches as $branch)
+            <div id="marker-div-{{ $branch->id }}" class="office_address col-sm-6 col-md-4 marker-divs">
                 <div class="team_member"> <img src="images/empty_logo.png"  alt="logo">
                     <h5>{{ $branch->title }}</h5>
                     <small>{{ $branch->sub_title }}</small><br>
@@ -21,8 +21,9 @@
                     <abbr title="Phone">P:</abbr> {{ $branch->mobile_no }}<br>
                     <abbr title="Phone">E:</abbr> <a href="mailto:{{ $branch->email }}">{{ $branch->email }}</a> </div>
             </div>
+            @endforeach
             <div class="contact_form col-sm-6 col-md-8">
-                <form name="contact_form" id="contact_form" method="post">
+                <form name="contact_form" action="{{ URL::route('contact.submit') }}" id="contact_form" method="post">
                     <div class="row">
                         <div class="col-sm-6 col-md-6">
                             <label>Name</label>
@@ -45,13 +46,12 @@
                             <textarea name="message" id="message" rows="8" class="form-control"></textarea>
                         </div>
                         <div class="col-sm-12 col-md-12"><br/>
-                            <a id="submit_btn" class="btn btn-primary" name="submit">Submit Message</a> <span id="notice" class="alert alert-warning alert-dismissable hidden" style="margin-left:20px;"></span> </div>
+                            <button type="submit" id="submit_btn" class="btn btn-primary">Submit Message</button>
+                        </div>
                     </div>
-                    <input type="hidden" name="to_email" value="{{ $branch->email }}"/>
                 </form>
             </div>
         </div>
-        @endforeach
     </section>
 </div>
 @stop

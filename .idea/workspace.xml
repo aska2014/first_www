@@ -23,28 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.blade.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="127" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.2771739" vertical-offset="391" max-vertical-offset="1054">
+            <state line="49" column="24" selection-start="2515" selection-end="2515" vertical-scroll-proportion="-16.576923" vertical-offset="402" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fast_commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/projects/index.blade.php">
+      <file leaf-file-name="contact.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/emails/contact.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="113" selection-start="693" selection-end="693" vertical-scroll-proportion="-10.769231" vertical-offset="26" max-vertical-offset="884">
+            <state line="19" column="37" selection-start="455" selection-end="455" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="476">
               <folding />
             </state>
           </provider>
@@ -60,12 +60,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/app.php" />
-        <option value="$PROJECT_DIR$/app/Aska/Site/Permissions/PagePermission.php" />
-        <option value="$PROJECT_DIR$/app/Aska/Site/Models/Page.php" />
-        <option value="$PROJECT_DIR$/app/database/migrations/2014_10_09_153229_create_pages_table.php" />
-        <option value="$PROJECT_DIR$/app/controllers/SiteApi/PageController.php" />
-        <option value="$PROJECT_DIR$/app/Aska/ImageHandlers/PageSectionImage.php" />
         <option value="$PROJECT_DIR$/app/Aska/Site/Models/PageSection.php" />
         <option value="$PROJECT_DIR$/../cleanstart-html/documentation/document.html" />
         <option value="$PROJECT_DIR$/app/Aska/Media/Models/Image.php" />
@@ -102,15 +96,21 @@
         <option value="$PROJECT_DIR$/app/controllers/CompanyBranchController.php" />
         <option value="$PROJECT_DIR$/app/Aska/Site/Permissions/CompanyBranchPermission.php" />
         <option value="$PROJECT_DIR$/app/database/migrations/2014_10_11_124229_create_company_branches_table.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
         <option value="$PROJECT_DIR$/app/controllers/SiteApi/CompanyBranchController.php" />
         <option value="$PROJECT_DIR$/public/js/google_map.js" />
         <option value="$PROJECT_DIR$/app/views/index.blade.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ContactUsController.php" />
-        <option value="$PROJECT_DIR$/app/views/contact/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Aska/composers/FooterComposer.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/slider.blade.php" />
         <option value="$PROJECT_DIR$/app/views/template/header.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/slider.blade.php" />
+        <option value="$PROJECT_DIR$/app/database/migrations/2014_10_12_195352_create_contact_emails_table.php" />
+        <option value="$PROJECT_DIR$/app/controllers/SiteApi/ContactEmailController.php" />
+        <option value="$PROJECT_DIR$/app/Aska/Site/Permissions/ContactEmailPermission.php" />
+        <option value="$PROJECT_DIR$/app/Aska/Site/Models/ContactEmail.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/views/contact/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/views/emails/contact.blade.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ContactUsController.php" />
+        <option value="$PROJECT_DIR$/app/config/production/mail.php" />
       </list>
     </option>
   </component>
@@ -321,7 +321,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="emails" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -339,7 +343,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Aska" />
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="emails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="auth" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -357,11 +369,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Aska" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Social" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -379,11 +387,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Aska" />
+              <option name="myItemId" value="config" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="composers" />
+              <option name="myItemId" value="production" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="local" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -404,11 +434,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Projects\firstchoice\www\app\Aska\Site\Permissions" />
+      <recent name="D:\Projects\firstchoice\www\app\config\production" />
+      <recent name="D:\Projects\firstchoice\www\app\views\emails" />
       <recent name="D:\Projects\firstchoice\www\app\controllers\SiteApi" />
+      <recent name="D:\Projects\firstchoice\www\app\Aska\Site\Permissions" />
       <recent name="D:\Projects\firstchoice\www\app\Aska\ImageHandlers" />
-      <recent name="D:\Projects\firstchoice\www\app\Aska\Site\Models" />
-      <recent name="D:\Projects\firstchoice\www\app\lang\ar" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Projects\firstchoice\www\app\views\partials" />
@@ -505,51 +535,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../cleanstart-html/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="30" selection-start="3066" selection-end="5347" vertical-scroll-proportion="0.8963636" vertical-offset="867" max-vertical-offset="6256" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/NewsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="20" selection-start="257" selection-end="257" vertical-scroll-proportion="0.4831261" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../cleanstart-html/single_post.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="242" column="20" selection-start="5484" selection-end="20997" vertical-scroll-proportion="0.15454546" vertical-offset="4029" max-vertical-offset="5899" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Aska/composers/HeaderComposer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="14" selection-start="519" selection-end="519" vertical-scroll-proportion="0.7584369" vertical-offset="15" max-vertical-offset="578" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/composers.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="64" selection-start="139" selection-end="139" vertical-scroll-proportion="0.09058615" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/ar/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="34" selection-start="217" selection-end="217" vertical-scroll-proportion="0.27175844" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/ar_style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7693" column="22" selection-start="174199" selection-end="174199" vertical-scroll-proportion="0.3923611" vertical-offset="130555" max-vertical-offset="160973" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/news/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="48" selection-start="674" selection-end="685" vertical-scroll-proportion="-0.43272728" vertical-offset="510" max-vertical-offset="1156" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/lang/en/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="21" selection-start="210" selection-end="210" vertical-scroll-proportion="0.27175844" vertical-offset="0" max-vertical-offset="563" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Aska/Site/Models/News.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="43" column="49" selection-start="855" selection-end="855" vertical-scroll-proportion="0.96980464" vertical-offset="151" max-vertical-offset="969" />
@@ -680,11 +665,6 @@
         <state line="5" column="45" selection-start="143" selection-end="143" vertical-scroll-proportion="0.09058615" vertical-offset="34" max-vertical-offset="646" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="141" column="27" selection-start="5206" selection-end="5206" vertical-scroll-proportion="0.5254545" vertical-offset="2108" max-vertical-offset="4318" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ServicesController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.15097691" vertical-offset="85" max-vertical-offset="867" />
@@ -695,11 +675,6 @@
         <state line="285" column="22" selection-start="17804" selection-end="17804" vertical-scroll-proportion="0.47454545" vertical-offset="4584" max-vertical-offset="5134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="31" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.061818182" vertical-offset="493" max-vertical-offset="2006" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/SiteApi/CompanyBranchController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="83" column="6" selection-start="1827" selection-end="1827" vertical-scroll-proportion="0.8745387" vertical-offset="937" max-vertical-offset="1768" />
@@ -707,7 +682,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Aska/Site/Models/CompanyBranch.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="5" selection-start="643" selection-end="643" vertical-scroll-proportion="0.42273533" vertical-offset="306" max-vertical-offset="952" />
+        <state line="32" column="5" selection-start="643" selection-end="643" vertical-scroll-proportion="0.42273533" vertical-offset="306" max-vertical-offset="952">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_11_124229_create_company_branches_table.php">
@@ -715,35 +692,9 @@
         <state line="28" column="0" selection-start="667" selection-end="667" vertical-scroll-proportion="0.39253998" vertical-offset="238" max-vertical-offset="884" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/ContactUsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="20" selection-start="949" selection-end="955" vertical-scroll-proportion="0.6980462" vertical-offset="389" max-vertical-offset="952" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="284" selection-end="284" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="1054">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Aska/composers/FooterComposer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="79" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.7292035" vertical-offset="285" max-vertical-offset="850">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/slider.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="23" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.4141593" vertical-offset="463" max-vertical-offset="2380">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/project/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="38" vertical-scroll-proportion="-0.5543478" vertical-offset="306" max-vertical-offset="1020">
           <folding />
         </state>
       </provider>
@@ -755,23 +706,134 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="38" column="56" selection-start="2407" selection-end="2407" vertical-scroll-proportion="0.46195653" vertical-offset="391" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/projects/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="113" selection-start="693" selection-end="693" vertical-scroll-proportion="-10.769231" vertical-offset="26" max-vertical-offset="884">
+        <state line="18" column="113" selection-start="693" selection-end="693" vertical-scroll-proportion="0.5072464" vertical-offset="26" max-vertical-offset="884">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/database/migrations/2014_10_12_195352_create_contact_emails_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="36" selection-start="360" selection-end="360" vertical-scroll-proportion="0.5115044" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/slider.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="23" selection-start="1601" selection-end="1601" vertical-scroll-proportion="0.4141593" vertical-offset="463" max-vertical-offset="2380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Aska/Site/Models/ContactDetail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="96" selection-end="734" vertical-scroll-proportion="0.15097691" vertical-offset="0" max-vertical-offset="765">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SiteApi/ContactDetailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="140" selection-end="140" vertical-scroll-proportion="-1.3552397" vertical-offset="848" max-vertical-offset="1411">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Aska/Site/Permissions/ProductPermission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="44" selection-start="136" selection-end="750" vertical-scroll-proportion="0.120781526" vertical-offset="0" max-vertical-offset="612">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Aska/Site/Permissions/ContactEmailPermission.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="481" selection-end="481" vertical-scroll-proportion="0.5737122" vertical-offset="0" max-vertical-offset="663">
+          <folding>
+            <element signature="e#40#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/SiteApi/ContactEmailController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="82" selection-start="410" selection-end="410" vertical-scroll-proportion="-1.1172291" vertical-offset="867" max-vertical-offset="1768">
+          <folding>
+            <element signature="e#27#61#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Aska/Site/Models/ContactEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="10" selection-start="356" selection-end="356" vertical-scroll-proportion="0.60390764" vertical-offset="0" max-vertical-offset="563">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="31" selection-start="1716" selection-end="1716" vertical-scroll-proportion="-0.21636364" vertical-offset="646" max-vertical-offset="2006">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/project/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="121" selection-start="1922" selection-end="1972" vertical-scroll-proportion="0.8036364" vertical-offset="306" max-vertical-offset="1020">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/emails/contact.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="37" selection-start="455" selection-end="455" vertical-scroll-proportion="-12.423077" vertical-offset="0" max-vertical-offset="476">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/production/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="116" column="37" selection-start="4211" selection-end="4211" vertical-scroll-proportion="0.57726467" vertical-offset="1647" max-vertical-offset="2210">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/ContactUsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="13" selection-start="1492" selection-end="1492" vertical-scroll-proportion="0.72824156" vertical-offset="644" max-vertical-offset="1241">
+          <folding>
+            <element signature="e#7#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="90" selection-start="1721" selection-end="1725" vertical-scroll-proportion="0.5254545" vertical-offset="510" max-vertical-offset="4369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="24" selection-start="2515" selection-end="2515" vertical-scroll-proportion="-16.576923" vertical-offset="402" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/fast_commit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="127" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.2771739" vertical-offset="391" max-vertical-offset="1054">
+        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>

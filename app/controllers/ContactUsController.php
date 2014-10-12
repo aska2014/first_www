@@ -1,20 +1,18 @@
 <?php
 
 use Aska\Site\Models\CompanyBranch;
+use Aska\Site\Models\ContactEmail;
 
 class ContactUsController extends BaseController {
 
     /**
-     * @var CompanyBranch
-     */
-    protected $branches;
-
-    /**
      * @param CompanyBranch $branches
+     * @param Aska\Site\Models\ContactEmail $contactEmails
      */
-    public function __construct(CompanyBranch $branches)
+    public function __construct(CompanyBranch $branches, ContactEmail $contactEmails)
     {
         $this->branches = $branches;
+        $this->contactEmails = $contactEmails;
     }
 
     /**
@@ -47,5 +45,24 @@ class ContactUsController extends BaseController {
         $map->center = $location;
 
         return View::make('contact.index')->with('map', $map)->with('branches', $branches);
+    }
+
+
+    /**
+     * Send message to all registered emails
+     */
+    public function send()
+    {
+        $allEmails = $this->contactEmails->all();
+
+        $inputs = Input::all();
+
+        foreach($allEmails as $email) {
+
+            Mail::send('emails.contact', compact('inputs'), function($mail) use($email)
+            {
+                $mail->to($email, 'FirstChoice administrator')->subject('Message from FirstChoice');
+            });
+        }
     }
 }

@@ -45,6 +45,7 @@ Route::get('/news/{news}.html', ['as' => 'news', 'uses' => 'NewsController@show'
 Route::get('/p/{page}.html', ['as' => 'page', 'uses' => 'PageController@show']);
 
 Route::get('/contact-us.html', ['as' => 'contact_us', 'uses' => 'ContactUsController@index']);
+Route::post('/send-us-message', ['as' => 'contact.submit', 'uses' => 'ContactUsController@send']);
 
 Route::get('change-language/{lan}', ['as' => 'language', function($lan) {
 
@@ -140,6 +141,7 @@ Route::group(['namespace' => 'SiteApi', 'prefix' => 'site/api/v1', 'before' => '
     Route::resource('page', 'PageController');
     Route::resource('news', 'NewsController');
     Route::resource('branch', 'CompanyBranchController');
+    Route::resource('contact-email', 'ContactEmailController');
 
 });
 
@@ -182,6 +184,7 @@ if(0 === strpos(Request::path(), 'site')) {
     Route::model('page_section', 'Aska\Site\Models\PageSection');
     Route::model('news', 'Aska\Site\Models\News');
     Route::model('branch', 'Aska\Site\Models\CompanyBranch');
+    Route::model('contact_email', 'Aska\Site\Models\ContactEmail');
 }
 
 
