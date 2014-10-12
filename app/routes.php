@@ -232,7 +232,7 @@ Route::get('test', function() {
 
 // Command line
 Route::get('command-line', function() {
-    echo '<form action="POST">';
+    echo '<form method="POST">';
     echo '<input type="text" placeholder="password" />';
     echo '<input type="text" placeholder="command" />';
     echo '<input type="submit" />';
