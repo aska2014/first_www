@@ -100,7 +100,7 @@
                         @foreach($productImages as $productImage)
                         <?php $i++ ?>
                         <li class="flickr-image no-{{$i}}">
-                            <a rel="prettyPhoto" href="{{ $productImage->addOperation('fit', 70, 70)->cached_url }}">
+                            <a rel="prettyPhoto" href="{{ URL::route('products') }}">
                                 <img src="{{ $productImage->addOperation('fit', 70, 70)->cached_url }}" />
                             </a>
                         </li>
