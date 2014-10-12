@@ -30,7 +30,7 @@ class NewsController extends BaseController {
         $news = $this->news->bySlug($slug)->first();
 
         $projects = $this->projects->with('images')->take(6)->get();
-        $recentNews = $this->projects->with('images')->take(6)->get();
+        $recentNews = $this->news->with('images')->take(6)->get();
         $products = $this->products->all();
         $services = $this->services->all();
 
