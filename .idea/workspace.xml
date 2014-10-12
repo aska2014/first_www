@@ -34,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/news/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="85" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.49454546" vertical-offset="663" max-vertical-offset="1292">
+            <state line="61" column="59" selection-start="3293" selection-end="3293" vertical-scroll-proportion="-15.038462" vertical-offset="646" max-vertical-offset="1292">
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#aside#1;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
               </folding>
@@ -45,10 +45,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fast_commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -990,19 +990,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/news/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="85" selection-start="2885" selection-end="2885" vertical-scroll-proportion="0.49454546" vertical-offset="663" max-vertical-offset="1292">
+        <state line="61" column="59" selection-start="3293" selection-end="3293" vertical-scroll-proportion="-15.038462" vertical-offset="646" max-vertical-offset="1292">
           <folding>
             <element signature="n#style#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#aside#1;n#div#1;n#div#0;n#div#0;n#section#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
+          <folding />
         </state>
       </provider>
     </entry>
