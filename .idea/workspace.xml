@@ -23,10 +23,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FooterComposer.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Aska/composers/FooterComposer.php">
+      <file leaf-file-name="header.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="79" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.7292035" vertical-offset="285" max-vertical-offset="850">
+            <state line="11" column="8" selection-start="400" selection-end="400" vertical-scroll-proportion="-0.0" vertical-offset="187" max-vertical-offset="1054">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="slider.blade.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/partials/slider.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="23" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-9.0" vertical-offset="463" max-vertical-offset="2380">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/fast_commit.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="591">
               <folding />
             </state>
           </provider>
@@ -90,9 +108,9 @@
         <option value="$PROJECT_DIR$/public/js/google_map.js" />
         <option value="$PROJECT_DIR$/app/views/index.blade.php" />
         <option value="$PROJECT_DIR$/app/controllers/ContactUsController.php" />
-        <option value="$PROJECT_DIR$/app/views/partials/slider.blade.php" />
         <option value="$PROJECT_DIR$/app/views/contact/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Aska/composers/FooterComposer.php" />
+        <option value="$PROJECT_DIR$/app/views/partials/slider.blade.php" />
       </list>
     </option>
   </component>
@@ -180,6 +198,68 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="template" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="api" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="www" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="partials" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,11 +666,6 @@
         <state line="285" column="22" selection-start="17804" selection-end="17804" vertical-scroll-proportion="0.47454545" vertical-offset="4584" max-vertical-offset="5134" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="8" selection-start="400" selection-end="400" vertical-scroll-proportion="0.34" vertical-offset="0" max-vertical-offset="1054" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="31" column="31" selection-start="1716" selection-end="1716" vertical-scroll-proportion="0.061818182" vertical-offset="493" max-vertical-offset="2006" />
@@ -616,24 +691,37 @@
         <state line="46" column="20" selection-start="949" selection-end="955" vertical-scroll-proportion="0.6980462" vertical-offset="389" max-vertical-offset="952" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/partials/slider.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="105" column="39" selection-start="4488" selection-end="4488" vertical-scroll-proportion="0.124333926" vertical-offset="1715" max-vertical-offset="2278" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="13" selection-start="284" selection-end="284" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="1054" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="83" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589" />
+        <state line="10" column="13" selection-start="284" selection-end="284" vertical-scroll-proportion="0.3090909" vertical-offset="0" max-vertical-offset="1054">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Aska/composers/FooterComposer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="79" selection-start="1191" selection-end="1191" vertical-scroll-proportion="0.7292035" vertical-offset="285" max-vertical-offset="850">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="8" selection-start="400" selection-end="400" vertical-scroll-proportion="-0.0" vertical-offset="187" max-vertical-offset="1054">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/partials/slider.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="23" selection-start="1601" selection-end="1601" vertical-scroll-proportion="-9.0" vertical-offset="463" max-vertical-offset="2380">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="591">
           <folding />
         </state>
       </provider>

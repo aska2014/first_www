@@ -39,7 +39,7 @@
             // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
             var mapOptions = {
                 // How zoomed in you want the map to start at (always required)
-                zoom: 12,
+                zoom: 6,
                 // Disable scrollwheel zooming on the map
                 scrollwheel: false,
                 center: myLatlng,
@@ -90,20 +90,26 @@
             var map = new google.maps.Map(mapElement, mapOptions);
 
             @foreach($map->locations as $location)
+
             // Put a marker at the center of the map
             var marker{{ $location->id }} = new google.maps.Marker({
                 position: new google.maps.LatLng({{ $location->latitude }}, {{ $location->longitude }}),
                 map: map,
             });
-
-            $(".marker-divs").hide();
             // Listen for marker clicks
             google.maps.event.addListener(marker{{ $location->id }}, 'click', function() {
-                $(".marker-divs").hide();
-                $("#marker-div-{{ $location->id }}").show();
+                selectMarker(marker{{ $location->id }}, "{{ $location->id }}");
             });
+
             @endforeach
-            $("#marker-div-{{ $location->id }}").show();
+
+            selectMarker(marker{{ $location->id }}, "{{ $location->id }}");
+        }
+
+        function selectMarker(marker, id) {
+
+            $(".marker-divs").hide();
+            $("#marker-div-" + id).show();
         }
     }())
 </script>
