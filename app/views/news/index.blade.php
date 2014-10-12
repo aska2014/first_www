@@ -53,7 +53,7 @@
                         </div>
                         <div id="tags" class="tab-pane fade">
                             <?php
-                                $classes = ['default', 'primary', 'success', 'danger', 'inverse'];
+                                $classes = ['default', 'primary', 'success', 'danger'];
                             ?>
                             @foreach($products as $product)
                             <a class="label label-{{ $classes[rand(0, 4)] }}">{{ $product->title }}</a>
