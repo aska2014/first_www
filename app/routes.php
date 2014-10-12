@@ -233,8 +233,8 @@ Route::get('test', function() {
 // Command line
 Route::get('command-line', function() {
     echo '<form method="POST">';
-    echo '<input type="text" placeholder="password" />';
-    echo '<input type="text" placeholder="command" />';
+    echo '<input type="text" name="password" placeholder="password" />';
+    echo '<input type="text" name="command" placeholder="command" />';
     echo '<input type="submit" />';
     echo '</form>';
 });
