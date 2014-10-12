@@ -30,7 +30,7 @@
                                 <div class="dmui-container">
                                     <ul class="dmui-submenu">
                                         @foreach($news->take(5) as $oneNews)
-                                        <li><a href="{{ URL::route('news', $oneNews->slug) }}">{{ $oneNews->title }}</a></li>
+                                        <li><a href="{{ URL::route('news', $oneNews->slug) }}">{{ str_limit($oneNews->title, 8) }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
