@@ -23,19 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header.blade.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="header.blade.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="42" column="153" selection-start="2778" selection-end="2778" vertical-scroll-proportion="-12.423077" vertical-offset="391" max-vertical-offset="1054">
+            <state line="32" column="127" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.2771739" vertical-offset="391" max-vertical-offset="1054">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/fast_commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="591">
+            <state line="4" column="9" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
               <folding />
             </state>
           </provider>
@@ -762,16 +762,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
+    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="153" selection-start="2778" selection-end="2778" vertical-scroll-proportion="-12.423077" vertical-offset="391" max-vertical-offset="1054">
+        <state line="4" column="9" selection-start="83" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fast_commit.txt">
+    <entry file="file://$PROJECT_DIR$/app/views/template/header.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11505922" vertical-offset="0" max-vertical-offset="591">
+        <state line="32" column="127" selection-start="2123" selection-end="2123" vertical-scroll-proportion="0.2771739" vertical-offset="391" max-vertical-offset="1054">
           <folding />
         </state>
       </provider>

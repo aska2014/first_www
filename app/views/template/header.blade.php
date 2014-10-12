@@ -30,7 +30,7 @@
                                 <div class="dmui-container">
                                     <ul class="dmui-submenu">
                                         @foreach($news->take(5) as $oneNews)
-                                        <li><a href="{{ URL::route('news', $oneNews->slug) }}">{{ str_limit($oneNews->title, 10) }}</a></li>
+                                        <li><a href="{{ URL::route('news', $oneNews->slug) }}">{{ str_limit($oneNews->title, 15) }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
@@ -40,7 +40,7 @@
                                 <div class="dmui-container">
                                     <ul class="dmui-submenu">
                                         @foreach($aboutUsPage->sections->take(5) as $section)
-                                        <li><a href="{{ URL::route('page', $aboutUsPage->slug) }}#{{ $section->slug }}">{{ str_limit($section->title, 10) }}</a></li>
+                                        <li><a href="{{ URL::route('page', $aboutUsPage->slug) }}#{{ $section->slug }}">{{ str_limit($section->title, 15) }}</a></li>
                                         @endforeach
                                     </ul>
                                 </div>
