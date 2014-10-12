@@ -46,7 +46,7 @@
                                     </a>
                                     @endif
                                     <h5 class="media-heading"><a href="#">{{ $oneNews->title }}</a></h5>
-                                    <p>{{ str_limit($oneNews->description, 40) }}</p>
+                                    <p>{{ str_limit($oneNews->description, 60) }}</p>
                                 </li>
                                 @endforeach
                             </ul>
