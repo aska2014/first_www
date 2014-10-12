@@ -61,7 +61,7 @@ class ContactUsController extends BaseController {
 
             Mail::send('emails.contact', compact('inputs'), function($mail) use($email)
             {
-                $mail->to($email, 'FirstChoice administrator')->subject('Message from FirstChoice');
+                $mail->to($email->email, 'FirstChoice administrator')->subject('Message from FirstChoice');
             });
         }
 

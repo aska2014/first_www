@@ -26,7 +26,7 @@
       <file leaf-file-name="ContactUsController.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/ContactUsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="75" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-17.73077" vertical-offset="678" max-vertical-offset="1275">
+            <state line="63" column="39" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-15.115385" vertical-offset="678" max-vertical-offset="1275">
               <folding>
                 <element signature="e#7#42#0" expanded="true" />
               </folding>
@@ -34,28 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.blade.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1122">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fast_commit.txt" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="fast_commit.txt" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/fast_commit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/routes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="248" column="72" selection-start="8165" selection-end="8165" vertical-scroll-proportion="0.8036364" vertical-offset="3774" max-vertical-offset="4369">
+            <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
               <folding />
             </state>
           </provider>
@@ -119,9 +101,9 @@
         <option value="$PROJECT_DIR$/app/Aska/Site/Models/ContactEmail.php" />
         <option value="$PROJECT_DIR$/app/views/emails/contact.blade.php" />
         <option value="$PROJECT_DIR$/app/config/production/mail.php" />
-        <option value="$PROJECT_DIR$/app/controllers/ContactUsController.php" />
         <option value="$PROJECT_DIR$/app/views/contact/index.blade.php" />
         <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/controllers/ContactUsController.php" />
       </list>
     </option>
   </component>
@@ -859,32 +841,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="239" column="3" selection-start="7778" selection-end="7778" vertical-scroll-proportion="0.5254545" vertical-offset="3774" max-vertical-offset="4369">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="0.45293072" vertical-offset="0" max-vertical-offset="1122">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/ContactUsController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="75" selection-start="1696" selection-end="1696" vertical-scroll-proportion="-17.73077" vertical-offset="678" max-vertical-offset="1275">
+        <state line="63" column="39" selection-start="1532" selection-end="1532" vertical-scroll-proportion="-15.115385" vertical-offset="678" max-vertical-offset="1275">
           <folding>
             <element signature="e#7#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/contact/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="428" selection-end="428" vertical-scroll-proportion="-9.807693" vertical-offset="0" max-vertical-offset="1122">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/fast_commit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="248" column="72" selection-start="8165" selection-end="8165" vertical-scroll-proportion="0.8036364" vertical-offset="3774" max-vertical-offset="4369">
+        <state line="4" column="9" selection-start="0" selection-end="83" vertical-scroll-proportion="0.11544991" vertical-offset="0" max-vertical-offset="589">
           <folding />
         </state>
       </provider>
