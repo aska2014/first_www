@@ -246,7 +246,7 @@ Route::post('command-line', function() {
             Artisan::call('migrate --force');
             Artisan::call('db:seed --force');
         } else {
-            Artisan::call(Input::get('command'));
+            Artisan::call(Input::get('command') . ' --force');
         }
     }
 });
