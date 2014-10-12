@@ -42,7 +42,7 @@ class FooterComposer {
      */
     protected function getTweets()
     {
-        return Twitter::getUserTimeline(array('screen_name' => 'thujohn', 'count' => 5));
+        return Twitter::getUserTimeline(array('screen_name' => 'First_Choice_CO', 'count' => 5));
     }
 
 } 
