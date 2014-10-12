@@ -11,7 +11,7 @@
     <strong>Name: </strong> {{ $inputs['name'] }}<br/>
     <strong>Email: </strong> {{ $inputs['email'] }}<br/>
     <strong>Subject: </strong> {{ $inputs['subject'] }}<br/>
-    <strong>Message: </strong> {{ $inputs['body'] }}<br/>
+    <strong>Message: </strong> {{ $inputs['message'] }}<br/>
 
     <hr />
 
