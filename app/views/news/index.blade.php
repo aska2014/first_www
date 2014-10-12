@@ -56,10 +56,10 @@
                                 $classes = ['default', 'primary', 'success', 'danger'];
                             ?>
                             @foreach($products as $product)
-                            <a href="{{ URL::route('product', $product->slug) }}" class="label label-{{ $classes[rand(0, 4)] }}">{{ $product->title }}</a>
+                            <a href="{{ URL::route('product', $product->slug) }}" class="label label-{{ $classes[rand(0, 3)] }}">{{ $product->title }}</a>
                             @endforeach
                             @foreach($services as $service)
-                            <a href="{{ URL::route('service', $service->slug) }}" class="label label-{{ $classes[rand(0, 4)] }}">{{ $service->title }}</a>
+                            <a href="{{ URL::route('service', $service->slug) }}" class="label label-{{ $classes[rand(0, 3)] }}">{{ $service->title }}</a>
                             @endforeach
                         </div>
                     </div>
